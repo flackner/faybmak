@@ -1,12 +1,14 @@
-// Colemak-DH 3l Edition
 
-xkb_symbols "colemak_3l" {
+// Colemak-DH Fabian Edition Faybmak
 
-    name[Group1]= "English (Colemak-3l)";
+xkb_symbols "colemak_dh_fabian" {
+
+    name[Group1]= "English (Colemak-DH-Fabian)";
     
     key.type[Group1] = "ONE_LEVEL";
 
     key <RALT> { [ ISO_Level3_Shift] };  // Cur Modifier
+    key <LCTL> { [ ISO_Level5_Shift ] }; // Sym Modifier
     key <BKSL> { [ ISO_Level5_Shift ] }; // Sym Modifier
 
     // This changes the <CAPS> key to become a Control modifier,
@@ -52,17 +54,6 @@ xkb_symbols "colemak_3l" {
 
     // Top row numbers - not part of spec, but given for convenience
     key.type[Group1] = "ONE_LEVEL";
-
-    key <AE01> { [ 1 ] };
-    key <AE02> { [ 2 ] };
-    key <AE03> { [ 3 ] };
-    key <AE04> { [ 4 ] };
-    key <AE05> { [ 5 ] };
-    key <AE06> { [ 6 ] };
-    key <AE07> { [ 7 ] };
-    key <AE08> { [ 8 ] };
-    key <AE09> { [ 9 ] };
-    key <AE10> { [ 0 ] };
 
     key <AE01> {
         symbols[Group1]= [ NoSymbol ],
@@ -130,7 +121,7 @@ xkb_symbols "colemak_3l" {
     key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC";
 
     key <AD01> {
-    symbols[Group1]= [              q,              Q,     numbersign,      backslash,        percent,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              q,              Q,     numbersign,      backslash,          colon,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -183,7 +174,7 @@ xkb_symbols "colemak_3l" {
         NoAction() ] };
 
     key <AD06> {
-    symbols[Group1]= [       question,         ssharp,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              z,              Z,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
@@ -208,7 +199,7 @@ xkb_symbols "colemak_3l" {
         NoAction() ] };
 
     key <AC01> {
-    symbols[Group1]= [              a,              A,       NoSymbol,       NoSymbol,       asterisk,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              a,              A,       NoSymbol,       NoSymbol,          minus,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -220,7 +211,7 @@ xkb_symbols "colemak_3l" {
         RedirectKey(key=<FK05>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AC02> {
-    symbols[Group1]= [              r,              R,       NoSymbol,       NoSymbol,          minus,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              r,              R,       NoSymbol,       NoSymbol,           plus,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -232,7 +223,7 @@ xkb_symbols "colemak_3l" {
         RedirectKey(key=<FK06>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AC03> {
-    symbols[Group1]= [              s,              S,       NoSymbol,       NoSymbol,           plus,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              s,              S,       NoSymbol,       NoSymbol,       asterisk,         ssharp,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -264,32 +255,32 @@ xkb_symbols "colemak_3l" {
         RedirectKey(key=<END>, clearmods=LevelThree) ] };
 
     key <AC06> {
-    symbols[Group1]= [     odiaeresis,     Odiaeresis,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              y,              Y,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AC07> {
-    symbols[Group1]= [              m,              M,       NoSymbol,       NoSymbol,              2,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              m,              M,       NoSymbol,       NoSymbol,     asciitilde,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AC08> {
-    symbols[Group1]= [              n,              N,      parenleft,       NoSymbol,              3,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              n,              N,      parenleft,       NoSymbol,              4,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AC09> {
-    symbols[Group1]= [              e,              E,     parenright,       NoSymbol,              4,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              e,              E,     parenright,       NoSymbol,              5,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AC10> {
-    symbols[Group1]= [              i,              I,      braceleft,       NoSymbol,              5,       quotedbl,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              i,              I,      braceleft,       NoSymbol,              6,       quotedbl,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AC11> {
-    symbols[Group1]= [              o,              O,     braceright,       NoSymbol,              6,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              o,              O,     braceright,       NoSymbol,     odiaeresis,     Odiaeresis,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
@@ -318,7 +309,7 @@ xkb_symbols "colemak_3l" {
         RedirectKey(key=<FK02>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AB02> {
-    symbols[Group1]= [              f,              F,       NoSymbol,       NoSymbol,     asciitilde,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              f,              F,       NoSymbol,       NoSymbol,        percent,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -353,7 +344,7 @@ xkb_symbols "colemak_3l" {
         RedirectKey(key=<BKSP>) ] };
 
     key <AB06> {
-    symbols[Group1]= [         period,          colon,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [         period,       question,       NoSymbol,       NoSymbol,         period,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
@@ -368,12 +359,12 @@ xkb_symbols "colemak_3l" {
         NoAction() ] };
 
     key <AB09> {
-    symbols[Group1]= [     udiaeresis,     Udiaeresis,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [     udiaeresis,     Udiaeresis,       NoSymbol,       NoSymbol,              2,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AB10> {
-    symbols[Group1]= [     adiaeresis,     Adiaeresis,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [     adiaeresis,     Adiaeresis,       NoSymbol,       NoSymbol,              3,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
