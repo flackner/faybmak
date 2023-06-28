@@ -120,7 +120,7 @@ xkb_symbols "faybmak" {
     key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC";
 
     key <AD01> {
-    symbols[Group1]= [              q,              Q,     numbersign,               ,          colon,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              q,              Q,     numbersign,       NoSymbol,          colon,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -168,7 +168,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<FK12>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AD05> {
-    symbols[Group1]= [              b,              B,     apostrophe,               ,        greater,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              b,              B,     apostrophe,       NoSymbol,        greater,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
@@ -284,7 +284,7 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <LSGT> {
-    symbols[Group1]= [              z,              Z,         dollar,               ,     underscore,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              z,              Z,         dollar,       NoSymbol,     underscore,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -332,7 +332,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<FK04>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AB04> {
-    symbols[Group1]= [              v,              V,       quotedbl,               ,          comma,          grave,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              v,              V,       quotedbl,       NoSymbol,          comma,          grave,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction()] };
 
