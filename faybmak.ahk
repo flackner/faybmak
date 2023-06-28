@@ -1,41 +1,63 @@
 ﻿#Persistent
 #MaxHotkeysPerInterval 999999999
 
-LControl & RAlt::Cur := true
-LControl & RAlt Up::Cur := false
-SC02B::Sym := true
-SC02B Up::Sym := false
+#Space::
+{
+    If (faybmakIsActive)
+    {
+        faybmakIsActive := false
+        stopBox("faybmak - STOPPED")
+    }
+    Else
+    {
+        faybmakIsActive := true
+        activeBox("faybmak - ACTIVE")
+    }
+}
+return
 
-#If (AltGr) 
+; side click left
+NumpadLeft::Send,  {Alt Down}{Right}{Alt Up}
+; side click right
+NumpadRight::Send, {Alt Down}{Left}{Alt Up}
+; side wheel up
+NumpadDown::Send, {Ctrl Down}{LWin Down}{Left}{LWin Up}{Ctrl Up}
+; side wheel down
+NumpadUp::Send, {Ctrl Down}{LWin Down}{Right}{LWin Up}{Ctrl Up}
+  
+; gesture up
+NumpadIns::Send, {LWin Down}{Tab}{LWin Up}
+; gesture down
+NumpadDel::Send, {LWin Down}d{LWin Up}Dd
+; gesture left
+NumpadHome::Send, {Ctrl Down}x{Ctrl Up}
+; gesture right
+NumpadEnd::Send, {Ctrl Down}v{Ctrl Up}
+; gesture center
+NumpadClear::Send, {Ctrl Down}c{Ctrl Up}
 
-	SC011::Delete
-	SC012::Up
-	SC013::PgUp
-	SC01E::Home
-	SC01F::Left
-	SC020::Down
-	SC021::Right
-	SC022::End
-	SC02e::PgDn
+; mode click
+NumpadPgDn::Send, {Ctrl Down}{Click}{Ctrl Up}
 
-SC001::Esc
-SC002::F1
-SC003::F2
-SC004::F3
-SC005::F4
-SC006::F5
-SC007::F6
-SC008::F7
-SC009::F8
-SC00A::F9
-SC00B::F10
-SC00C::F11
-SC00D::F12
+; middle click
+NumpadPgUp::Send, {Click, Middle}
 
-SC00E::BackSpace
-SC00F::Tab
+#If (faybmakIsActive)
 
-#If (Cur and Sym)
+*CapsLock::LControl
+*SC01A::LControl
+*SC01B::RShift
+
+*SC01D::Sym := true
+*SC01D Up::Sym := false
+        
+*SC138::Cur := true
+*SC138 Up::Cur := false
+
+*SC02B::Sym := true
+*SC02B Up::Sym := false
+
+#If (faybmakIsActive and Cur and Sym)
 
 SC010::F9
 SC011::F10
@@ -72,17 +94,13 @@ SC033::Return
 SC034::Return
 SC035::Return
 
-SC00E::Return
-
-#If (Cur)
+#If (faybmakIsActive and Cur and !Sym)
 
 SC010::#
-+SC010::\
 SC011::Delete
 SC012::Up
 SC013::PgUp
 SC014::'
-+SC014::`
 SC015::Return
 SC016::Return
 SC017::Return
@@ -102,12 +120,10 @@ SC027::{
 SC028::}
 
 SC056::$
-+SC056::@
 SC02c::Insert
 SC02d::Esc
 SC02e::PgDn
 SC02f::"
-+SC02f::`
 SC030::Return
 SC031::Return
 SC032::Return
@@ -115,13 +131,12 @@ SC033::Return
 SC034::Return
 SC035::Return
 
-SC00E::Return
+#If (faybmakIsActive and !Cur and Sym)
 
-#If (Sym)
-
-SC010::SendInput, `%
+SC010:::
 SC011::!
 SC012::/
++SC012::Send {\}
 SC013::&
 SC014::>
 SC015::Return
@@ -130,54 +145,80 @@ SC017::7
 SC018::8
 SC019::9
 
-SC01E::*
-SC01F::-
-SC020::+
+SC01E::-
+SC01F::+
++SC01F::Send {€}
+SC020::*
++SC020::Send {ß}
 SC021::=
++SC021::Send {@}
 SC022::<
 SC023::Return
-SC024::2
-SC025::3
-SC026::4
-SC027::5
-SC028::6
+SC024::~
+SC025::4
+SC026::5
+SC027::6
+SC028::ö
 
 SC056::_
 SC02c::^
-SC02d::~
++SC02c::Send {°}
+SC02d::SendInput, `%
++SC02d::Send {§}
 SC02e::;
++SC02e::SendInput, ``
 SC02f::,
++SC02f::Send {´}
 SC030::|
-SC031::Return
+SC031::.
 SC032::0
 SC033::1
-SC034::Return
-SC035::Return
+SC034::2
+SC035::3
 
-SC00E::
+#If (faybmakIsActive and !Cur and !Sym)
 
-#If (!Cur and !Sym)
+SC002::F1
+SC003::F2
+SC004::F3
+SC005::F4
+SC006::F5
+SC007::F6
+SC008::F7
+SC009::F8
+SC00A::F9
+SC00B::F10
+SC00C::F11
+SC00D::F12
+
++SC002::Send {1}
++SC003::Send {2}
++SC004::Send {3}
++SC005::Send {4}
++SC006::Send {5}
++SC007::Send {6}
++SC008::Send {7}
++SC009::Send {8}
++SC00A::Send {9}
++SC00B::Send {0}
 
 SC010::q
 SC011::w
 SC012::c
 SC013::p
 SC014::b
-SC015::?
+SC015::z
 SC016::j
 SC017::l
 SC018::u
 SC019::y
-SC01A::LControl
-SC01B::LShift
 
-CapsLock::LControl
 SC01E::a
 SC01F::r
 SC020::s
 SC021::t
 SC022::g
-SC023::ö
+SC023::y
 SC024::m
 SC025::n
 SC026::e
@@ -190,225 +231,37 @@ SC02d::f
 SC02e::d
 SC02f::v
 SC030::BackSpace
-SC031::.
+SC031::Send {.}
++SC031::Send {?}
 SC032::k
 SC033::h
 SC034::ü
 SC035::ä
 
-+SC010::Q
-+SC011::W
-+SC012::C
-+SC013::P
-+SC014::B
-+SC015::ß
-+SC016::J
-+SC017::L
-+SC018::U
-+SC019::Y
+#if
 
-+SC01E::A
-+SC01F::R
-+SC020::S
-+SC021::T
-+SC022::G
-+SC023::Ö
-+SC024::M
-+SC025::N
-+SC026::E
-+SC027::I
-+SC028::O
+;source: https://autohotkey.com/board/topic/18042-simple-message-on-top-for-a-delayed-time/
 
-+SC056::Z
-+SC02c::X
-+SC02d::F
-+SC02e::D
-+SC02f::V
-+SC030::BackSpace
-+SC031:::
-+SC032::K
-+SC033::H
-+SC034::Ü
-+SC035::Ä
+stopBox(text){
+	Gui, +AlwaysOnTop +ToolWindow -SysMenu -Caption
+	Gui, Color, d71d37 ;changes background color
+	Gui, Font, 000000 s20 wbold, Verdana ;changes font color, size and font
+	Gui, Add, Text, x0 y0, %text% ;the text to display
+    Gui, Show, NoActivate X0 Y0, "test"
+  
 
-SC00E::Space
+	sleep, 1000
+	Gui, Destroy
+}
 
-; +SC029::CapsLock
+activeBox(text){
+	Gui, +AlwaysOnTop +ToolWindow -SysMenu -Caption
+	Gui, Color, 2dd635 ;changes background color
+	Gui, Font, 000000 s20 wbold, Verdana ;changes font color, size and font
+	Gui, Add, Text, x0 y0, %text% ;the text to display
+    Gui, Show, NoActivate X0 Y0, "test"
+  
 
-; SC00F::Escape
-; SC010::q
-; +SC010::Q
-; SC028 & SC010::Send {"}
-; SC035 & SC010::Send {PgUp}
-; SC011::f
-; +SC011::F
-; SC028 & SC011::Send {_}
-; SC035 & SC011::
-;     if (GetKeyState("CTRL"))  {
-;         Send ^{Backspace}
-;     } else {
-;         Send {Backspace}
-;     }
-; return
-; SC012::u
-; +SC012::U
-; SC028 & SC012::Send {[}
-; SC035 & SC012::
-;     if (GetKeyState("CTRL") && !GetKeyState("SHIFT"))  {
-;         Send ^{Up}
-;     } else if (!GetKeyState("CTRL") && GetKeyState("SHIFT"))  {
-;         Send +{Up}
-;     } else if (GetKeyState("CTRL") && GetKeyState("SHIFT"))  {
-;         Send ^+{Up}
-;     } else {
-;         Send {Up}
-;     }
-; return
-; SC013::y
-; +SC013::Y
-; SC028 & SC013::Send {]}
-; SC035 & SC013::
-;     if (GetKeyState("CTRL"))  {
-;         Send ^{Delete}
-;     } else {
-;         Send {Delete}
-;     }
-; return
-; SC014::z
-; +SC014::Z
-; SC028 & SC014::Send {^}
-; SC035 & SC014::Send {PgDn}
-; SC015::x
-; +SC015::X
-; SC028 & SC015::Send {!}
-; SC016::k
-; +SC016::K
-; SC028 & SC016::Send {<}
-; SC035 & SC016::Send {1}
-; SC017::c
-; +SC017::C
-; SC028 & SC017::Send {>}
-; SC035 & SC017::Send {2}
-; SC018::w
-; +SC018::W
-; SC028 & SC018::Send {=}
-; SC035 & SC018::Send {3}
-; SC019::b
-; +SC019::B
-; SC028 & SC019::Send {&}
-
-; SC03A::Tab
-; SC01E::o
-; +SC01E::O
-; SC035 & SC01E::
-;     if (GetKeyState("SHIFT"))  {
-;         Send +{Home}
-;     } else {
-;         Send {Home}
-;     }
-; return
-; SC028 & SC01E::Send {/}
-; SC01F::h
-; +SC01F::H
-; SC028 & SC01F::Send {-}
-; SC035 & SC01F::
-;     if (GetKeyState("CTRL") && !GetKeyState("SHIFT"))  {
-;         Send ^{Left}
-;     } else if (!GetKeyState("CTRL") && GetKeyState("SHIFT"))  {
-;         Send +{Left}
-;     } else if (GetKeyState("CTRL") && GetKeyState("SHIFT"))  {
-;         Send ^+{Left}
-;     } else {
-;         Send {Left}
-;     }
-; return
-; SC020::e
-; +SC020::E
-; SC028 & SC020::Send {{}
-; SC035 & SC020::
-;     if (GetKeyState("CTRL") && !GetKeyState("SHIFT"))  {
-;         Send ^{Down}
-;     } else if (!GetKeyState("CTRL") && GetKeyState("SHIFT"))  {
-;         Send +{Down}
-;     } else if (GetKeyState("CTRL") && GetKeyState("SHIFT"))  {
-;         Send ^+{Down}
-;     } else {
-;         Send {Down}
-;     }
-; return
-; SC021::a
-; +SC021::A
-; SC028 & SC021::Send {}}
-; SC035 & SC021::
-;     if (GetKeyState("CTRL") && !GetKeyState("SHIFT"))  {
-;         Send ^{Right}
-;     } else if (!GetKeyState("CTRL") && GetKeyState("SHIFT"))  {
-;         Send +{Right}
-;     } else if (GetKeyState("CTRL") && GetKeyState("SHIFT"))  {
-;         Send ^+{Right}
-;     } else {
-;         Send {Right}
-;     }
-; return
-; SC022::i
-; +SC022::I
-; SC028 & SC022::Send {*}
-; SC035 & SC022::
-;     if (GetKeyState("SHIFT"))  {
-;         Send +{End}
-;     } else {
-;         Send {End}
-;     }
-; return
-; SC023::d
-; +SC023::D
-; SC028 & SC023::Send {?}
-; SC035 & SC023::Send {.}
-; SC024::r
-; +SC024::R
-; SC028 & SC024::Send {(}
-; SC035 & SC024::Send {4}
-; SC025::t
-; +SC025::T
-; SC028 & SC025::Send {)}
-; SC035 & SC025::Send {5}
-; SC026::n
-; +SC026::N
-; SC028 & SC026::Send {'}
-; SC035 & SC026::Send {6}
-; SC027::s
-; +SC027::S
-; SC028 & SC027::Send {:}
-
-; SC02C::Send {,}
-; SC028 & SC02C::Send {#}
-; SC02D::m
-; +SC02D::M
-; SC028 & SC02D::Send {$}
-; SC02E::Send {.}
-; +SC02E::Send {.}
-; SC028 & SC02E::Send {|}
-; SC02F::j
-; +SC02F::J
-; SC028 & SC02F::Send {~}
-; SC030::Send {;}
-; SC028 & SC030::Send {``}
-; SC031::g
-; +SC031::G
-; SC028 & SC031::Send {+}
-; SC035 & SC031::Send {0}
-; SC032::l
-; +SC032::L
-; SC028 & SC032::Send {`%}
-; SC035 & SC032::Send {7}
-; SC033::p
-; +SC033::P
-; SC028 & SC033::Send {\}
-; SC035 & SC033::Send {8}
-; SC034::v
-; +SC034::V
-; SC028 & SC034::Send {@}
-; SC035 & SC034::Send {9}
-
-; RAlt & LAlt::Suspend
-; LAlt & RAlt::Suspend
+	sleep, 1000
+	Gui, Destroy
+}
