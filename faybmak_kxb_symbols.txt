@@ -1,9 +1,8 @@
+// faybmak
 
-// Colemak-DH Fabian Edition Faybmak
+xkb_symbols "faybmak" {
 
-xkb_symbols "colemak_dh_fabian" {
-
-    name[Group1]= "English (Colemak-DH-Fabian)";
+    name[Group1]= "English (faybmak)";
     
     key.type[Group1] = "ONE_LEVEL";
 
@@ -121,7 +120,7 @@ xkb_symbols "colemak_dh_fabian" {
     key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC";
 
     key <AD01> {
-    symbols[Group1]= [              q,              Q,     numbersign,      backslash,          colon,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              q,              Q,     numbersign,               ,          colon,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -145,7 +144,7 @@ xkb_symbols "colemak_dh_fabian" {
         RedirectKey(key=<FK10>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AD03> {
-    symbols[Group1]= [              c,              C,       NoSymbol,       NoSymbol,          slash,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              c,              C,       NoSymbol,       NoSymbol,          slash,      backslash,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -169,7 +168,7 @@ xkb_symbols "colemak_dh_fabian" {
         RedirectKey(key=<FK12>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AD05> {
-    symbols[Group1]= [              b,              B,     apostrophe,         grave,         greater,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              b,              B,     apostrophe,               ,        greater,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
@@ -211,7 +210,7 @@ xkb_symbols "colemak_dh_fabian" {
         RedirectKey(key=<FK05>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AC02> {
-    symbols[Group1]= [              r,              R,       NoSymbol,       NoSymbol,           plus,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              r,              R,       NoSymbol,       NoSymbol,           plus,       EuroSign,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -235,7 +234,7 @@ xkb_symbols "colemak_dh_fabian" {
         RedirectKey(key=<FK07>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AC04> {
-    symbols[Group1]= [              t,              T,       NoSymbol,       NoSymbol,          equal,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              t,              T,       NoSymbol,       NoSymbol,          equal,             at,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -285,7 +284,7 @@ xkb_symbols "colemak_dh_fabian" {
         NoAction() ] };
 
     key <LSGT> {
-    symbols[Group1]= [              z,              Z,         dollar,             at,     underscore,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              z,              Z,         dollar,               ,     underscore,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -297,7 +296,7 @@ xkb_symbols "colemak_dh_fabian" {
         RedirectKey(key=<FK01>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AB01> {
-    symbols[Group1]= [              x,              X,       NoSymbol,       NoSymbol,    asciicircum,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              x,              X,       NoSymbol,       NoSymbol,    asciicircum,         degree,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -309,7 +308,7 @@ xkb_symbols "colemak_dh_fabian" {
         RedirectKey(key=<FK02>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AB02> {
-    symbols[Group1]= [              f,              F,       NoSymbol,       NoSymbol,        percent,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              f,              F,       NoSymbol,       NoSymbol,        percent,      paragraph,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -321,7 +320,7 @@ xkb_symbols "colemak_dh_fabian" {
         RedirectKey(key=<FK03>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AB03> {
-    symbols[Group1]= [              d,              D,       NoSymbol,       NoSymbol,      semicolon,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              d,              D,       NoSymbol,       NoSymbol,      semicolon,          acute,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -333,7 +332,7 @@ xkb_symbols "colemak_dh_fabian" {
         RedirectKey(key=<FK04>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AB04> {
-    symbols[Group1]= [              v,              V,       quotedbl,          acute,          comma,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              v,              V,       quotedbl,               ,          comma,          grave,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction()] };
 
