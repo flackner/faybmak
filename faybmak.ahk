@@ -191,17 +191,6 @@ SC00B::F10
 SC00C::F11
 SC00D::F12
 
-+SC002::Send {1}
-+SC003::Send {2}
-+SC004::Send {3}
-+SC005::Send {4}
-+SC006::Send {5}
-+SC007::Send {6}
-+SC008::Send {7}
-+SC009::Send {8}
-+SC00A::Send {9}
-+SC00B::Send {0}
-
 SC010::q
 SC011::w
 SC012::c
