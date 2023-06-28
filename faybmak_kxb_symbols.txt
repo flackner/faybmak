@@ -1,3 +1,4 @@
+
 // faybmak
 
 xkb_symbols "faybmak" {
@@ -308,7 +309,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<FK02>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AB02> {
-    symbols[Group1]= [              f,              F,       NoSymbol,       NoSymbol,        percent,      paragraph,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              f,              F,       NoSymbol,       NoSymbol,        percent,        section,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
