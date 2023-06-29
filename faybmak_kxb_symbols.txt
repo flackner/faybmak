@@ -1,4 +1,3 @@
-
 // faybmak
 
 xkb_symbols "faybmak" {
@@ -285,7 +284,7 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <LSGT> {
-    symbols[Group1]= [              z,              Z,         dollar,       NoSymbol,     underscore,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              z,              Z,         dollar,       NoSymbol,       question,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -344,7 +343,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<BKSP>) ] };
 
     key <AB06> {
-    symbols[Group1]= [         period,       question,       NoSymbol,       NoSymbol,         period,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [         period,     underscore,       NoSymbol,       NoSymbol,         period,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
