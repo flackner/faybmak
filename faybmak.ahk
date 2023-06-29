@@ -160,7 +160,7 @@ SC026::5
 SC027::6
 SC028::ö
 
-SC056::_
+SC056::?
 SC02c::^
 +SC02c::Send {°}
 SC02d::SendInput, `%
@@ -221,7 +221,7 @@ SC02e::d
 SC02f::v
 SC030::BackSpace
 SC031::Send {.}
-+SC031::Send {?}
++SC031::Send {_}
 SC032::k
 SC033::h
 SC034::ü
