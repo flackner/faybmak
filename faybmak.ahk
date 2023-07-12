@@ -1,7 +1,7 @@
-﻿#Persistent
+#Persistent
 #MaxHotkeysPerInterval 999999999
 
-#Space::
+#SC039::
 {
     If (faybmakIsActive)
     {
@@ -48,18 +48,33 @@ NumpadPgUp::Send, {Click, Middle}
 *SC01A::LControl
 *SC01B::RShift
 *SC136::LWin
-SC00F::Esc
-
-*SC01D::Sym := true
-*SC01D Up::Sym := false
         
 *SC138::Cur := true
 *SC138 Up::Cur := false
 
+*SC00F::Cur := true
+*SC00F Up::Cur := false
+
 *SC02B::Sym := true
 *SC02B Up::Sym := false
 
+*SC01D::Sym := true
+*SC01D Up::Sym := false		
+
 #If (faybmakIsActive and Cur and Sym)
+
+SC002::Return
+SC003::Return
+SC004::Return
+SC005::Return
+SC006::Return
+SC007::Return
+SC008::Return
+SC009::Return
+SC00A::Return
+SC00B::Return
+SC00C::Return
+SC00D::Return
 
 SC010::Return
 SC011::Return
@@ -82,24 +97,36 @@ SC024::Return
 SC025::BackSpace
 SC026::Delete
 SC027::Tab
-SC028::PgDn
-SC029::Tab
+SC028::PgUp
 
 SC056::Return
 SC02c::Return
 SC02d::Return
-SC02e::Return
+SC02e::PgDn
 SC02f::Return
 SC030::Return
 SC031::Return
-SC032::Return
+SC032::Return			
 SC033::Return
 SC034::Return
 SC035::Return
 
 #If (faybmakIsActive and Cur and !Sym)
 
-SC010::#
+SC002::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
+SC003::Send, {LAlt Down}{Left}{LAlt Up}
+SC004::Send, {LAlt Down}{Right}{LAlt Up}
+SC005::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
+SC006::Send, {LWin Down}{Tab}{LWin Up}
+SC007::Send, {LWin Down}d{LWin Up}
+SC008::Return
+SC009::Return
+SC00A::Return
+SC00B::Return
+SC00C::{
+SC00D::}
+
+SC010::Esc
 SC011::(
 SC012::Up
 SC013::)
@@ -111,36 +138,24 @@ SC018::[
 SC019::]
 
 SC01E::Home
-SC01F::Send, {LCtrl Down}{Left}{LCtrl Up}
-^SC01F::Send, {LCtrl Down}{Left}{LCtrl Up}
-!SC01F::Send, {LAlt Down}{LCtrl Down}{Left}{LCtrl Up}{LAlt Up}
-+SC01F::Send, {LShift Down}{LCtrl Down}{Left}{LCtrl Up}{LShift Up}
-#SC01F::Send, {LCtrl up}{LWin down}{LCtrl down}{Left}{LWin up}{LCtrl up}
+SC01F::Send, ^{Left}
++SC01F::Send, +^{Left}
+#SC01F::Send, #^{Left}
 SC020::Down
-SC021::Send, {LCtrl Down}{Right}{LCtrl Up}
-^SC021::Send, {LCtrl Down}{Right}{LCtrl Up}
-!SC021::Send, {LAlt Down}{LCtrl Down}{Right}{LCtrl Up}{LAlt Up}
-+SC021::Send, {LShift Down}{LCtrl Down}{Right}{LCtrl Up}{LShift Up}
-#SC021::Send, {LCtrl up}{LWin down}{LCtrl down}{Right}{LWin up}{LCtrl up}
+SC021::Send, ^{Right}
++SC021::Send, +^{Right}
+#SC021::Send, #^{Right}
 SC022::End
 SC023::Return
 SC024::Return
-SC025::Send, {LCtrl Down}{BackSpace}{LCtrl Up}
-^SC025::Send, {LCtrl Down}{BackSpace}{LCtrl Up}
-!SC025::Send, {LAlt Down}{LCtrl Down}{BackSpace}{LCtrl Up}{LAlt Up}
-+SC025::Send, {LShift Down}{LCtrl Down}{BackSpace}{LCtrl Up}{LShift Up}
-#SC025::Send, {LCtrl up}{LWin down}{LCtrl down}{BackSpace}{LWin up}{LCtrl up}
-SC026::Send, {LCtrl Down}{Delete}{LCtrl Up}
-^SC026::Send, {LCtrl Down}{Delete}{LCtrl Up}
-!SC026::Send, {LAlt Down}{LCtrl Down}{Delete}{LCtrl Up}{LAlt Up}
-+SC026::Send, {LShift Down}{LCtrl Down}{Delete}{LCtrl Up}{LShift Up}
-#SC026::Send, {LCtrl up}{LWin down}{LCtrl down}{Delete}{LWin up}{LCtrl up}
+SC025::Send, ^{BackSpace}
+SC026::Delete
 SC027::Tab
-SC028::PgDn
+SC028::PgUp
 
 SC056::$
-SC02c::Send, {LAlt Down}{Left}{LAlt Up}
-SC02d::Send, {LAlt Down}{Right}{LAlt Up}
+SC02c::^Home
+SC02d::PgUp
 SC02e::PgDn
 SC02f::"
 SC030::Return
@@ -150,7 +165,22 @@ SC033::Return
 SC034::Return
 SC035::Return
 
+SC039::Send, ^{Delete}
+
 #If (faybmakIsActive and !Cur and Sym)
+
+SC002::1
+SC003::2
+SC004::3
+SC005::4
+SC006::5
+SC007::6
+SC008::7
+SC009::8
+SC00A::9
+SC00B::0
+SC00C::Return
+SC00D::Return
 
 SC010:::
 SC011::!
@@ -177,7 +207,7 @@ SC024::~
 SC025::4
 SC026::5
 SC027::6
-SC028::ö
+SC028::#
 
 SC056::?
 SC02c::^
@@ -195,8 +225,11 @@ SC033::1
 SC034::2
 SC035::3
 
+SC039::.
+
 #If (faybmakIsActive and !Cur and !Sym)
 
+SC029::Tab
 SC002::F1
 SC003::F2
 SC004::F3
@@ -234,17 +267,18 @@ SC027::i
 SC028::o
 
 SC056::z
-SC02c::x
+SC02c::ö
 SC02d::f
 SC02e::d
 SC02f::v
-SC030::BackSpace
-SC031::Send {.}
-+SC031::Send {_}
+SC030::x
+SC031::BackSpace
 SC032::k
 SC033::h
 SC034::ü
 SC035::ä
+
++SC039::Send {_}
 
 #if
 
@@ -255,7 +289,7 @@ stopBox(text){
 	Gui, Color, d71d37 ;changes background color
 	Gui, Font, 000000 s20 wbold, Verdana ;changes font color, size and font
 	Gui, Add, Text, x0 y0, %text% ;the text to display
-    Gui, Show, NoActivate X0 Y0, "test"
+        Gui, Show, NoActivate X0 Y0, "test"
   
 
 	sleep, 1000
@@ -267,7 +301,7 @@ activeBox(text){
 	Gui, Color, 2dd635 ;changes background color
 	Gui, Font, 000000 s20 wbold, Verdana ;changes font color, size and font
 	Gui, Add, Text, x0 y0, %text% ;the text to display
-    Gui, Show, NoActivate X0 Y0, "test"
+        Gui, Show, NoActivate X0 Y0, "test"
   
 
 	sleep, 1000
