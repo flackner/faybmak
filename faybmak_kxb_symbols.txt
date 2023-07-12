@@ -1,5 +1,39 @@
 
 // faybmak
+// 1. space + shift does not work if kdb uses meta + space for layout switch
+
+// 2. vs code needs the following mod since it looks at the key code directly
+// {
+//     "key": "[Backquote]",
+//     "command": "type",
+//     "args": { "text": "\t" },
+//     "when": "editorTextFocus"
+// },
+// {
+//     "key": "Tab",
+//     "command": "type",
+//     "args": { "text": "" },
+//     "when": "editorTextFocus
+// }
+
+// 3. optionally use the following key syms
+// XF86ScrollUp,
+// XF86AudioPlay
+// XF86AudioPause
+// XF86AudioPrev
+// XF86ScrollDown
+// XF86ZoomOut
+// XF86AudioMute
+// XF86WWW
+// Menu	
+// XF86AudioStop
+// XF86Calculator
+// XF86Xfer
+// XF86Mail
+// XF86AudioNext
+// XF86AudioRaiseVolume
+// XF86ZoomIn
+// XF86AudioLowerVolume
 
 xkb_symbols "faybmak" {
 
@@ -7,145 +41,150 @@ xkb_symbols "faybmak" {
     
     key.type[Group1] = "ONE_LEVEL";
 
-    key <RALT> { [ ISO_Level3_Shift] };  // Cur Modifier
-    key <LCTL> { [ ISO_Level5_Shift ] }; // Sym Modifier
-    key <BKSL> { [ ISO_Level5_Shift ] }; // Sym Modifier
+    replace key <TLDE> { [ Tab ] };
+	replace key <BKSP> { [ BackSpace ] };
 
-    key <TLDE> { [ Tab ] };
-	key <BKSP> { [ BackSpace ] };
+    replace key <RALT> { [ ISO_Level3_Shift ] };
+    replace key <TAB>  { [ ISO_Level3_Shift ] };
+    replace key <LCTL> { [ ISO_Level5_Shift ] };
+    replace key <BKSL> { [ ISO_Level5_Shift ] };
 
-    key <RTSH> {
+    replace key <RTSH> {
         symbols[Group1]= [ NoSymbol ],
         actions[Group1]= [
         SetMods(modifiers=Super) ] };
 
-    key <AD11> {
+    replace key <AD11> {
         symbols[Group1]= [ NoSymbol ],
         actions[Group1]= [
         SetMods(modifiers=Control) ] };
     
-    key <AD12> {
+    replace key <AD12> {
         symbols[Group1]= [ NoSymbol ],
         actions[Group1]= [
         SetMods(modifiers=Shift) ] };
-
-    key <CAPS> {
+    
+    replace key <CAPS> {
         symbols[Group1]= [ NoSymbol ],
         actions[Group1]= [
         SetMods(modifiers=Control) ] };
-
-    // This changes the <CAPS> key to become a Control modifier,
-    // but it will still produce the Caps_Lock keysym.
-    // Eliminate CapsLock, making it another Ctrl.
-
-    //replace key <AD11> { [ Control_R ] };
-    //replace key <CAPS> { [ Control_L ] };
-    //replace key <AD12> { [ Shift_R ] };
-
-    // key <I10>	{	[ XF86ScrollUp		]	};
-    // key <I12>	{	[ XF86AudioPlay, XF86AudioPause ] };
-    // key <I17>	{	[ XF86AudioPrev		]	};
-    // key <I18>	{	[ XF86ScrollDown	]	};
-    // key <I19>	{	[ XF86ZoomOut		]	};
-    // key <I1E>	{	[ XF86AudioMute		]	};
-    // key <I21>	{	[ XF86WWW		]	};
-    // key <I22>	{	[ Menu			]	};
-    // key <I23>	{	[ XF86AudioStop		]	};
-    // key <I24>	{	[ XF86Calculator	]	};
-    // key <I25>	{	[ XF86Xfer		]	};
-    // key <I26>	{	[ XF86Mail		]	};
-    // key <I2E>	{	[ XF86AudioNext		]	};
-    // key <I30>	{	[ XF86AudioRaiseVolume	]	};
-    // key <I32>	{	[ XF86ZoomIn		]	};
-    // key <I68>	{	[ XF86AudioLowerVolume	]	};
-
-    key <AE01> {
-        symbols[Group1]= [ NoSymbol ],
-        actions[Group1]= [
-        RedirectKey(key=<FK01>) ] };
-
-    key <AE02> {
-        symbols[Group1]= [ NoSymbol ],
-        actions[Group1]= [
-        RedirectKey(key=<FK02>) ] };
-
-    key <AE03> {
-        symbols[Group1]= [ NoSymbol ],
-        actions[Group1]= [
-        RedirectKey(key=<FK03>) ] };
-
-    key <AE04> {
-        symbols[Group1]= [ NoSymbol ],
-        actions[Group1]= [
-        RedirectKey(key=<FK04>) ] };
-
-    key <AE05> {
-        symbols[Group1]= [ NoSymbol ],
-        actions[Group1]= [
-        RedirectKey(key=<FK05>) ] };
-
-    key <AE06> {
-        symbols[Group1]= [ NoSymbol ],
-        actions[Group1]= [
-        RedirectKey(key=<FK06>) ] };
-
-    key <AE07> {
-        symbols[Group1]= [ NoSymbol ],
-        actions[Group1]= [
-        RedirectKey(key=<FK07>) ] };
-
-    key <AE08> {
-        symbols[Group1]= [ NoSymbol ],
-        actions[Group1]= [
-        RedirectKey(key=<FK01>) ] };
-
-    key <AE09> {
-        symbols[Group1]= [ NoSymbol ],
-        actions[Group1]= [
-        RedirectKey(key=<FK09>) ] };
-
-    key <AE10> {
-        symbols[Group1]= [ NoSymbol ],
-        actions[Group1]= [
-        RedirectKey(key=<FK10>) ] };
-
-    key <AE11> {
-        symbols[Group1]= [ NoSymbol ],
-        actions[Group1]= [
-        RedirectKey(key=<FK11>) ] };
-
-    key <AE12> {
-        symbols[Group1]= [ NoSymbol ],
-        actions[Group1]= [
-        RedirectKey(key=<FK12>) ] };
 
     // Main keys
     // Order of mods (defined by EIGHT_LEVEL_SEMIALPHABETIC) is:
     //           [               None,          Shift,            Cur,      Shift+Cur,            Sym,      Shift+Sym,        Cur+Sym,  Shift+Cur+Sym ]
     key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC";
 
-    key <TAB> {
+    key <SPCE> {
+    symbols[Group1]= [          space,     underscore,       NoSymbol,       NoSymbol,         period,         period,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [ 
+        NoAction(),
+        NoAction(),
+        RedirectKey(key=<DELE>, clearmods=LevelThree, modifiers=Control),
+        RedirectKey(key=<DELE>, clearmods=LevelThree, modifiers=Control) ] };
+
+    key <AE01> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
-        RedirectKey(key=<ESC>),
-        RedirectKey(key=<ESC>) ] };
+        RedirectKey(key=<FK01>),
+        RedirectKey(key=<FK01>),
+        RedirectKey(key=<LEFT>, clearmods=LevelThree, modifiers=Control, modifiers=Super),
+        RedirectKey(key=<LEFT>, clearmods=LevelThree, modifiers=Control, modifiers=Super)] };
+
+    key <AE02> {
+    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [ 
+        RedirectKey(key=<FK02>),
+        RedirectKey(key=<FK02>),
+        RedirectKey(key=<LEFT>, clearmods=LevelThree, modifiers=Alt),
+        RedirectKey(key=<LEFT>, clearmods=LevelThree, modifiers=Alt)] };
+
+    key <AE03> {
+    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [ 
+        RedirectKey(key=<FK03>),
+        RedirectKey(key=<FK03>),
+        RedirectKey(key=<RGHT>, clearmods=LevelThree, modifiers=Alt),
+        RedirectKey(key=<RGHT>, clearmods=LevelThree, modifiers=Alt) ] };
+
+    key <AE04> {
+    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [ 
+        RedirectKey(key=<FK04>),
+        RedirectKey(key=<FK04>),
+        RedirectKey(key=<RGHT>, clearmods=LevelThree, modifiers=Control, modifiers=Super),
+        RedirectKey(key=<RGHT>, clearmods=LevelThree, modifiers=Control, modifiers=Super)] };
+
+    key <AE05> {
+    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [ 
+        RedirectKey(key=<FK05>),
+        RedirectKey(key=<FK05>),
+        RedirectKey(key=<AD02>, clearmods=LevelThree, modifiers=Super),
+        RedirectKey(key=<AD02>, clearmods=LevelThree, modifiers=Super)] };
+
+    key <AE06> {
+    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [ 
+        RedirectKey(key=<FK06>),
+        RedirectKey(key=<FK06>),
+        RedirectKey(key=<AB03>, clearmods=LevelThree, modifiers=Super),
+        RedirectKey(key=<AB03>, clearmods=LevelThree, modifiers=Super)] };
+
+    key <AE07> {
+    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [ 
+        RedirectKey(key=<FK07>),
+        RedirectKey(key=<FK07>),
+        NoAction(),    
+        NoAction() ] };
+
+    key <AE08> {
+    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [ 
+        RedirectKey(key=<FK08>),
+        RedirectKey(key=<FK08>),
+        NoAction(),    
+        NoAction() ] };
+
+    key <AE09> {
+    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [ 
+        RedirectKey(key=<FK09>),
+        RedirectKey(key=<FK09>),
+        NoAction(),    
+        NoAction() ] };
+
+    key <AE10> {
+    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [ 
+        RedirectKey(key=<FK10>),
+        RedirectKey(key=<FK10>),
+        NoAction(),    
+        NoAction() ] };
 
     key <AE11> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,      braceleft,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         RedirectKey(key=<FK11>),
-        RedirectKey(key=<FK11>) ] };
+        RedirectKey(key=<FK11>),
+        NoAction(),    
+        NoAction() ] };
 
     key <AE12> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,     braceright,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         RedirectKey(key=<FK12>),
-        RedirectKey(key=<FK12>) ] };
+        RedirectKey(key=<FK12>),
+        NoAction(),    
+        NoAction() ] };
 
     key <AD01> {
-    symbols[Group1]= [              q,              Q,     numbersign,       NoSymbol,          colon,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              q,              Q,       NoSymbol,       NoSymbol,          colon,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
-        NoAction() ] };
+        NoAction(),    
+        NoAction(),
+        RedirectKey(key=<ESC>, clearmods=LevelThree),
+        RedirectKey(key=<ESC>, clearmods=LevelThree) ] };
 
     key <AD02> {
     symbols[Group1]= [              w,              W,      parenleft,      parenleft,         exclam,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -154,8 +193,8 @@ xkb_symbols "faybmak" {
 
     key <AD03> {
     symbols[Group1]= [              c,              C,       NoSymbol,       NoSymbol,          slash,      backslash,       NoSymbol,       NoSymbol ],
-    actions[Group1]= [ 
-        NoAction(),
+    actions[Group1]= [
+        NoAction(),    
         NoAction(),
         RedirectKey(key=<UP>, clearmods=LevelThree),
         RedirectKey(key=<UP>, clearmods=LevelThree) ] };
@@ -270,12 +309,8 @@ xkb_symbols "faybmak" {
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
-        RedirectKey(key=<DELE>, clearmods=LevelThree, modifiers=Control),
-        RedirectKey(key=<DELE>, clearmods=LevelThree, modifiers=Control),
-        NoAction(),
-        NoAction(), 
-        RedirectKey(key=<DELE>, clearmods=LevelThree, clearmods=LevelFive),
-        RedirectKey(key=<DELE>, clearmods=LevelThree, clearmods=LevelFive) ] };
+        RedirectKey(key=<DELE>, clearmods=LevelThree),
+        RedirectKey(key=<DELE>, clearmods=LevelThree) ] };
 
     key <AC10> {
     symbols[Group1]= [              i,              I,       NoSymbol,       NoSymbol,              6,       quotedbl,       NoSymbol,       NoSymbol ],
@@ -286,7 +321,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<TLDE>, clearmods=LevelThree) ] };
 
     key <AC11> {
-    symbols[Group1]= [              o,              O,       NoSymbol,       NoSymbol,     odiaeresis,     Odiaeresis,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              o,              O,       NoSymbol,       NoSymbol,     numbersign,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -299,20 +334,20 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <AB01> {
-    symbols[Group1]= [              x,              X,       NoSymbol,       NoSymbol,    asciicircum,         degree,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [     odiaeresis,     Odiaeresis,       NoSymbol,       NoSymbol,    asciicircum,         degree,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
-        RedirectKey(key=<LEFT>, clearmods=LevelThree, modifiers=Alt),
-        RedirectKey(key=<LEFT>, clearmods=LevelThree, modifiers=Alt) ] };
+        RedirectKey(key=<HOME>, clearmods=LevelThree, modifiers=Control),
+        RedirectKey(key=<HOME>, clearmods=LevelThree, modifiers=Control) ] };
 
     key <AB02> {
     symbols[Group1]= [              f,              F,       NoSymbol,       NoSymbol,        percent,        section,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
-        RedirectKey(key=<RGHT>, clearmods=LevelThree, modifiers=Alt),
-        RedirectKey(key=<RGHT>, clearmods=LevelThree, modifiers=Alt) ] };
+        RedirectKey(key=<PGUP>, clearmods=LevelThree),
+        RedirectKey(key=<PGUP>, clearmods=LevelThree) ] };
 
     key <AB03> {
     symbols[Group1]= [              d,              D,       NoSymbol,       NoSymbol,      semicolon,          acute,       NoSymbol,       NoSymbol ],
@@ -328,17 +363,15 @@ xkb_symbols "faybmak" {
         NoAction()] };
 
     key <AB05> {
+    symbols[Group1]= [              x,              X,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [ 
+        NoAction() ] };
+
+    key <AB06> {
     symbols[Group1]= [      NoSymbol,        NoSymbol,       NoSymbol,       NoSymbol,            bar,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         RedirectKey(key=<BKSP>),
-        RedirectKey(key=<BKSP>),
-        RedirectKey(key=<AB01>, clearmods=LevelThree, modifiers=Control),
-        RedirectKey(key=<AB01>, clearmods=LevelThree, modifiers=Control)] };
-
-    key <AB06> {
-    symbols[Group1]= [         period,     underscore,       NoSymbol,       NoSymbol,         period,       NoSymbol,       NoSymbol,       NoSymbol ],
-    actions[Group1]= [ 
-        NoAction() ] };
+        RedirectKey(key=<BKSP>)] };
 
     key <AB07> {
     symbols[Group1]= [              k,              K,       NoSymbol,       NoSymbol,              0,       NoSymbol,       NoSymbol,       NoSymbol ],
