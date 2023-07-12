@@ -363,12 +363,12 @@ xkb_symbols "faybmak" {
         NoAction()] };
 
     key <AB05> {
-    symbols[Group1]= [              x,              X,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              x,              X,       NoSymbol,       NoSymbol,            bar,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AB06> {
-    symbols[Group1]= [      NoSymbol,        NoSymbol,       NoSymbol,       NoSymbol,            bar,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [      NoSymbol,        NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         RedirectKey(key=<BKSP>),
         RedirectKey(key=<BKSP>)] };
