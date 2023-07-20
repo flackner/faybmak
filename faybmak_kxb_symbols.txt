@@ -82,8 +82,8 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<DELE>, clearmods=LevelThree, modifiers=Control),
         NoAction(),    
         NoAction(),
-        RedirectKey(key=<AD02>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Super),
-        RedirectKey(key=<AD02>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Super)] };
+        RedirectKey(key=<FK14>, clearmods=LevelThree, clearmods=LevelFive),
+        RedirectKey(key=<FK14>, clearmods=LevelThree, clearmods=LevelFive)] };
 
     key <TLDE> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -124,8 +124,8 @@ xkb_symbols "faybmak" {
         NoAction(),
         NoAction(),    
         NoAction(),
-        RedirectKey(key=<LSGT>, clearmods=LevelThree, modifiers=Control),
-        RedirectKey(key=<LSGT>, clearmods=LevelThree, modifiers=Control)] };
+        RedirectKey(key=<LSGT>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
+        RedirectKey(key=<LSGT>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control)] };
 
     key <AE04> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -136,8 +136,8 @@ xkb_symbols "faybmak" {
         NoAction(),
         NoAction(),    
         NoAction(),
-        RedirectKey(key=<AD10>, clearmods=LevelThree, modifiers=Control),
-        RedirectKey(key=<AD10>, clearmods=LevelThree, modifiers=Control)] };
+        RedirectKey(key=<AD10>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
+        RedirectKey(key=<AD10>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control)] };
 
     key <AE05> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -145,7 +145,11 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<FK05>),
         RedirectKey(key=<FK05>),
         RedirectKey(key=<AD02>, clearmods=LevelThree, modifiers=Super),
-        RedirectKey(key=<AD02>, clearmods=LevelThree, modifiers=Super)] };
+        RedirectKey(key=<AD02>, clearmods=LevelThree, modifiers=Super),
+        NoAction(),    
+        NoAction(),
+        RedirectKey(key=<FK15>, clearmods=LevelThree, clearmods=LevelFive),
+        RedirectKey(key=<FK15>, clearmods=LevelThree, clearmods=LevelFive)] };
 
     key <AE06> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -220,8 +224,8 @@ xkb_symbols "faybmak" {
     actions[Group1]= [ 
         NoAction(),    
         NoAction(),
-        RedirectKey(key=<ESC>, clearmods=LevelThree),
-        RedirectKey(key=<ESC>, clearmods=LevelThree),
+        RedirectKey(key=<LEFT>, clearmods=LevelThree),
+        RedirectKey(key=<LEFT>, clearmods=LevelThree),
         NoAction(),    
         NoAction(),
         RedirectKey(key=<RGHT>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Alt),
