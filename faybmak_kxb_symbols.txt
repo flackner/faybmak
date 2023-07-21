@@ -279,22 +279,22 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <AD08> {
-    symbols[Group1]= [              l,              L,       NoSymbol,       NoSymbol,              7,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              l,              L,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AD09> {
-    symbols[Group1]= [              u,              U,    bracketleft,       NoSymbol,              8,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              u,              U,    bracketleft,       NoSymbol,              7,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AD10> {
-    symbols[Group1]= [              y,              Y,   bracketright,       NoSymbol,              9,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              y,              Y,   bracketright,       NoSymbol,              8,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AD11> {
-    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,         period,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,              9,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         RedirectKey(key=<BKSP>),
         RedirectKey(key=<BKSP>) ] };
