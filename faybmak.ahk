@@ -197,7 +197,6 @@ SC00D::Return
 SC010::#
 SC011::!
 SC012::/
-+SC012::Send {\}
 SC013::&
 SC014::|
 SC015::Return
@@ -216,7 +215,7 @@ SC021::.
 +SC021::Send {@}
 SC022:::
 SC023::Return
-SC024::Return
+SC024::\
 SC025::<
 SC026::>
 SC027::~
@@ -232,7 +231,7 @@ SC02e::;
 SC02f::,
 +SC02f::Send {´}
 SC030::$
-SC031::.
+SC031::Return
 SC032::Send, {LCtrl Down}{LShift Down}{Tab}{LShift Up}{LCtrl Up}
 SC033::Send, {LCtrl Down}{Tab}{LCtrl Up}
 SC034::Return
