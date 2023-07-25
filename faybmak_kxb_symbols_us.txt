@@ -208,7 +208,7 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <AD01> {
-    symbols[Group1]= [              q,              Q,       NoSymbol,       NoSymbol,          colon,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              q,              Q,       NoSymbol,       NoSymbol,     numbersign,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),    
         NoAction(),
@@ -232,7 +232,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<RGHT>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Alt) ] };
 
     key <AD03> {
-    symbols[Group1]= [              c,              C,       NoSymbol,       NoSymbol,          slash,      backslash,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              c,              C,       NoSymbol,       NoSymbol,          slash,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [
         NoAction(),
         NoAction(),
@@ -256,7 +256,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<HOME>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control) ] };
 
     key <AD05> {
-    symbols[Group1]= [              b,              B,       NoSymbol,       NoSymbol,        greater,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              b,              B,       NoSymbol,       NoSymbol,         	  bar,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),    
         NoAction(),
@@ -289,12 +289,12 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <AD10> {
-    symbols[Group1]= [              y,              Y,   bracketright,       NoSymbol,        NoSymbol,       NoSymbol,              9,       NoSymbol ],
+    symbols[Group1]= [              y,              Y,   bracketright,       NoSymbol,       NoSymbol,       NoSymbol,              9,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AD11> {
-    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,        NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,           colon,       NoSymbol ],
     actions[Group1]= [ 
         RedirectKey(key=<BKSP>),
         RedirectKey(key=<BKSP>),
@@ -333,7 +333,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<PGDN>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AC04> {
-    symbols[Group1]= [              t,              T,       NoSymbol,       NoSymbol,        period,             at,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              t,              T,       NoSymbol,       NoSymbol,        period,               at,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -345,7 +345,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<DELE>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control) ] };
 
     key <AC05> {
-    symbols[Group1]= [              g,              G,       NoSymbol,       NoSymbol,          less,        NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              g,              G,       NoSymbol,       NoSymbol,       	colon,        NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -355,22 +355,22 @@ xkb_symbols "faybmak" {
     //key <AC06> { };
 
     key <AC07> {
-    symbols[Group1]= [              m,              M,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              m,              M,       NoSymbol,       NoSymbol,      backslash,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AC08> {
-    symbols[Group1]= [              n,              N,      parenleft,       NoSymbol,            bar,       NoSymbol,              4,       NoSymbol ],
+    symbols[Group1]= [              n,              N,      parenleft,       NoSymbol,           less,       NoSymbol,              4,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AC09> {
-    symbols[Group1]= [              e,              E,     parenright,       NoSymbol,     asciitilde,       NoSymbol,              5,       NoSymbol ],
+    symbols[Group1]= [              e,              E,     parenright,       NoSymbol,        greater,       NoSymbol,              5,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AC10> {
-    symbols[Group1]= [              i,              I,       NoSymbol,       NoSymbol,     numbersign,       NoSymbol,              6,       NoSymbol ],
+    symbols[Group1]= [              i,              I,       NoSymbol,       NoSymbol,     asciitilde,       NoSymbol,              6,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -378,7 +378,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<AC06>, clearmods=LevelThree) ] };
 
     key <AC11> {
-    symbols[Group1]= [              o,              O,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              o,              O,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,         period,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -414,7 +414,7 @@ xkb_symbols "faybmak" {
         NoAction()] };
 
     key <AB05> {
-    symbols[Group1]= [              x,              X,       NoSymbol,       NoSymbol,            bar,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              x,              X,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
