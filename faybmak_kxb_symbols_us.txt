@@ -324,12 +324,12 @@ xkb_symbols "faybmak" {
     actions[Group1]= [ 
         RedirectKey(key=<BKSP>),
         RedirectKey(key=<BKSP>),
-        RedirectKey(key=<ESC>),
-        RedirectKey(key=<ESC>),
+        RedirectKey(key=<ESC>, clearmods=LevelThree),
+        RedirectKey(key=<ESC>, clearmods=LevelThree),
         NoAction(),
         NoAction(),
-        RedirectKey(key=<BKSP>),
-        RedirectKey(key=<BKSP>) ] };
+        RedirectKey(key=<BKSP>, clearmods=LevelThree, clearmods=LevelFive),
+        RedirectKey(key=<BKSP>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AC01> {
     symbols[Group1]= [              a,              A,       NoSymbol,       NoSymbol,          minus,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -426,7 +426,7 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <LSGT> {
-    symbols[Group1]= [              z,              Z,        dollar,       NoSymbol,      backslash,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              z,              Z,         dollar,       NoSymbol,      backslash,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
