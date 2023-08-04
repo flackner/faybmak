@@ -18,9 +18,10 @@ faybmakIsActive := true
 return
 
 ; side click left
-NumpadLeft::Send,  {LAlt Down}{Right}{LAlt Up}
+; NumpadLeft::Send, {LAlt Down}{Right}{LAlt Up}
+NumpadLeft::Send, {LCtrl Down}f{LCtrl Up}
 ; side click right
-NumpadRight::Send, {LAlt Down}{Left}{LAlt Up}
+; NumpadRight::Send, {LAlt Down}{Left}{LAlt Up}
 ; side wheel up
 NumpadDown::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
 ; side wheel down
@@ -29,11 +30,12 @@ NumpadUp::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
 ; gesture up
 NumpadIns::Send, {LWin Down}e{LWin Up}
 ; gesture down
-NumpadDel::Send, {LWin Down}{LShift Down}s{LShift Up}{LWin Up}
+NumpadDel::Send, {LWin Down}d{LWin Up}
 ; gesture left
-NumpadHome::Delete
+NumpadHome::Send, {LWin Down}{LShift Down}s{LShift Up}{LWin Up}
 ; gesture right
 NumpadEnd::Send, {LCtrl Down}{LShift Down}n{LShift Up}{LCtrl Up}
+
 ; gesture center
 NumpadClear::Send, {LWin Down}v{LWin Up}
 
@@ -44,6 +46,10 @@ NumpadPgDn::Send, {LCtrl Down}{Click}{LCtrl Up}
 NumpadPgUp::Send, {Click, Middle}
 
 #If (faybmakIsActive)
+
+; side click right
+*NumpadRight::Cur := true
+*NumpadRight Up::Cur := false
 
 *CapsLock::LControl
 *SC01B::RShift
@@ -71,36 +77,36 @@ SC00E::Return ; just for the moment
 
 SC002::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
 SC003::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
-SC004::Send, {LCtrl Down}z{LCtrl Up}
-SC005::Send, {LCtrl Down}y{LCtrl Up}
-SC006::Send, {LWin Down}d{LWin Up}
-SC007::Return
-SC008::Return
-SC009::Return
-SC00A::Return
-SC00B::Return
+SC004::^z
+SC005::^y
+SC006::!F4
+SC007::#6
+SC008::#7
+SC009::#8
+SC00A::#9
+SC00B::#0
 SC00C::Return
 SC00D::Return
 
-SC010::Send, {LAlt Down}{Left}{LAlt Up}  
-SC011::Send, {LAlt Down}{Right}{LAlt Up}
-SC012::PgUp
-SC013::^Home
-SC014::^End
+SC010::BackSpace
+SC011::Delete
+SC012::!^PgUp
+SC013::!Left
+SC014::!Right
 SC015::Return
 SC016::Return
 SC017::7
 SC018::8
 SC019::9
-SC01A:::
+SC01A::BackSpace
 
-SC01E::Return
-SC01F::Send, ^{BackSpace}
-SC020::PgDn
-SC021::Send, ^{Delete}
-SC022::Return
+SC01E::^Home
+SC01F::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
+SC020::!^PgDn
+SC021::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
+SC022::Down
 SC023::Return
-SC024::Return
+SC024::0
 SC025::4
 SC026::5
 SC027::6
@@ -109,43 +115,43 @@ SC028::.
 SC056::Return
 SC02c::Return
 SC02d::Return
-SC02e::Send, {LAlt Down}{Left}{LAlt Up}
-SC02f::Send, {LAlt Down}{Right}{LAlt Up}
+SC02e::^PgUp
+SC02f::^PgDn
 SC030::Return
 SC031::Return
-SC032::0
-SC033::1
-SC034::2
-SC035::3
+SC032::1
+SC033::2
+SC034::3
+SC035:::
 
-SC039::Send, {LWin Down}{Tab}{LWin Up}
+SC039::enter
 
 #If (faybmakIsActive and Cur and !Sym)
 
-SC002::Return
-SC003::Return
-SC004::Return
-SC005::Return
-SC006::Return
-SC007::Return
-SC008::Return
-SC009::Return
-SC00A::Return
-SC00B::Return
+SC002::^#1
+SC003::^#2
+SC004::^#3
+SC005::^#4
+SC006::^#5
+SC007::^#6
+SC008::^#7
+SC009::^#8
+SC00A::^#9
+SC00B::^#0
 SC00C::Return
 SC00D::Return
 
-SC010::Esc
+SC010::{
 SC011::Left
 SC012::Up
 SC013::Right
-SC014::^Home
+SC014::}
 SC015::Return
 SC016::Return
 SC017::Return
 SC018::[
 SC019::]
-SC01A::+Tab
+SC01A::Esc
 
 SC01E::Home
 SC01F::Send, ^{Left}
@@ -163,16 +169,16 @@ SC024::Return
 SC025::(
 SC026::)
 SC027::Tab
-SC028::Delete
+SC028::'
 
-SC056::^End
-SC02c::{
-SC02d::}
-SC02e::"
-SC02f::'
-SC030::Return
+SC056::$
+SC02c::Return
+SC02d::Return
+SC02e::^Up
+SC02f::^Down
+SC030::"
 SC031::Return
-SC032::Return
+SC032::!^<
 SC033::Return
 SC034::Return
 SC035::Return
@@ -181,16 +187,16 @@ SC039::^Delete
 
 #If (faybmakIsActive and !Cur and Sym)
 
-SC002::1
-SC003::2
-SC004::3
-SC005::4
-SC006::5
-SC007::6
-SC008::7
-SC009::8
-SC00A::9
-SC00B::0
+SC002::^1
+SC003::^2
+SC004::^3
+SC005::^4
+SC006::^5
+SC007::^6
+SC008::^7
+SC009::^8
+SC00A::^9
+SC00B::^0
 SC00C::Return
 SC00D::Return
 
@@ -210,30 +216,28 @@ SC01E::-
 SC01F::+
 +SC01F::Send {€}
 SC020::*
-+SC020::Send {ß}
++SC020::Send {°}
 SC021::.
-+SC021::Send {@}
++SC021::Send {§}
 SC022:::
 SC023::Return
-SC024::\
+SC024::Return
 SC025::<
 SC026::>
 SC027::~
 SC028::Return
 
-SC056::?
+SC056::\
 SC02c::^
-+SC02c::Send {°}
 SC02d::SendInput, `%
-+SC02d::Send {§}
 SC02e::;
 +SC02e::SendInput, ``
 SC02f::,
 +SC02f::Send {´}
-SC030::$
+SC030::?
 SC031::Return
-SC032::Send, {LCtrl Down}{LShift Down}{Tab}{LShift Up}{LCtrl Up}
-SC033::Send, {LCtrl Down}{Tab}{LCtrl Up}
+SC032::ß
+SC033::@
 SC034::Return
 SC035::Return
 
@@ -241,7 +245,7 @@ SC039::Send {=}
 
 #If (faybmakIsActive and !Cur and !Sym)
 
-SC029::Send, {LWin Down}e{LWin Up}
+SC029::#e
 SC002::F1
 SC003::F2
 SC004::F3
@@ -260,7 +264,7 @@ SC011::w
 SC012::c
 SC013::p
 SC014::b
-SC015::+Tab
+SC015::Tab
 SC016::j
 SC017::l
 SC018::u
@@ -272,7 +276,7 @@ SC01F::r
 SC020::s
 SC021::t
 SC022::g
-SC023::Tab
+SC023::^Up
 SC024::m
 SC025::n
 SC026::e
@@ -285,7 +289,7 @@ SC02d::f
 SC02e::d
 SC02f::v
 SC030::x
-SC031::Esc
+SC031::^Down
 SC032::k
 SC033::h
 SC034::ü
