@@ -1,4 +1,40 @@
 
+// faybmak
+// 1. space + shift does not work if kdb uses meta + space for layout switch
+
+// 2. vs code needs the following mod since it looks at the key code directly
+// {
+//     "key": "[Backquote]",
+//     "command": "type",
+//     "args": { "text": "\t" },
+//     "when": "editorTextFocus"
+// },
+// {
+//     "key": "Tab",
+//     "command": "type",
+//     "args": { "text": "" },
+//     "when": "editorTextFocus
+// }
+
+// 3. optionally use the following key syms
+// XF86ScrollUp,
+// XF86AudioPlay
+// XF86AudioPause
+// XF86AudioPrev
+// XF86ScrollDown
+// XF86ZoomOut
+// XF86AudioMute
+// XF86WWW
+// Menu	
+// XF86AudioStop
+// XF86Calculator
+// XF86Xfer
+// XF86Mail
+// XF86AudioNext
+// XF86AudioRaiseVolume
+// XF86ZoomIn
+// XF86AudioLowerVolume
+
 xkb_symbols "faybmak" {
 
     name[Group1]= "English (faybmak)";
