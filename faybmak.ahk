@@ -90,7 +90,7 @@ SC00D::Return
 
 SC010::BackSpace
 SC011::Delete
-SC012::!^PgUp
+SC012::!Up
 SC013::!Left
 SC014::!Right
 SC015::Return
@@ -100,11 +100,11 @@ SC018::8
 SC019::9
 SC01A::BackSpace
 
-SC01E::^Home
-SC01F::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
-SC020::!^PgDn
-SC021::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
-SC022::Down
+SC01E::^PgUp
+SC01F::!^Home
+SC020::!Down
+SC021::!^End
+SC022::^PgDn
 SC023::Return
 SC024::0
 SC025::4
@@ -115,8 +115,8 @@ SC028::.
 SC056::Return
 SC02c::Return
 SC02d::Return
-SC02e::^PgUp
-SC02f::^PgDn
+SC02e::!^PgUp
+SC02f::!^PgDn
 SC030::Return
 SC031::Return
 SC032::1
@@ -141,11 +141,11 @@ SC00B::^#0
 SC00C::Return
 SC00D::Return
 
-SC010::{
+SC010::!Left
 SC011::Left
 SC012::Up
 SC013::Right
-SC014::}
+SC014::!Right
 SC015::Return
 SC016::Return
 SC017::Return
@@ -166,19 +166,21 @@ SC021::Send, ^{Right}
 SC022::End
 SC023::Return
 SC024::Return
-SC025::(
-SC026::)
+SC025::Send, (
++SC025::Send, {{}
+SC026::Send, )
++SC026::Send, {}}
 SC027::Tab
 SC028::'
 
 SC056::$
 SC02c::Return
 SC02d::Return
-SC02e::^Up
-SC02f::^Down
+SC02e::PgUp
+SC02f::PgDn
 SC030::"
 SC031::Return
-SC032::!^<
+SC032::!^k
 SC033::Return
 SC034::Return
 SC035::Return
@@ -224,7 +226,7 @@ SC023::Return
 SC024::Return
 SC025::<
 SC026::>
-SC027::~
+SC027::@
 SC028::Return
 
 SC056::\
@@ -236,8 +238,8 @@ SC02f::,
 +SC02f::Send {´}
 SC030::?
 SC031::Return
-SC032::ß
-SC033::@
+SC032::~
+SC033::ß
 SC034::Return
 SC035::Return
 
