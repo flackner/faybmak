@@ -55,6 +55,32 @@
             ]
         },
         {
+            "command": "multiCommand.upLine",
+            "sequence": [
+                {
+                    "command": "cursorMove",
+                    "args": {
+                        "to": "up",
+                        "by": "wrappedLine",
+                        "value": 10
+                    }
+                }
+            ]
+        },
+        {
+            "command": "multiCommand.downLine",
+            "sequence": [
+                {
+                    "command": "cursorMove",
+                    "args": {
+                        "to": "down",
+                        "by": "wrappedLine",
+                        "value": 10
+                    }
+                }
+            ]
+        },
+        {
             "command": "multiCommand.upLineKeepCursorSelect",
             "sequence": [
                 {
