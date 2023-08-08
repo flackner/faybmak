@@ -194,6 +194,16 @@
       "when": "editorTextFocus"
   },
   {
+      "key": "ctrl+alt+pageup",
+      "command": "multiCommand.upLine",
+      "when": "editorTextFocus"
+  },
+  {
+      "key": "ctrl+alt+pagedown",
+      "command": "multiCommand.downLine",
+      "when": "editorTextFocus"
+  },
+  {
       "key": "ctrl+shift+up",
       "command": "multiCommand.upLineKeepCursorSelect",
       "when": "editorTextFocus"
@@ -310,46 +320,6 @@
   {
       "key": "alt+home",
       "command": "editor.action.commentLine"
-  },
-  {
-      "key": "ctrl+alt+pageup",
-      "command": "editor.action.moveLinesUpAction",
-      "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-      "key": "alt+up",
-      "command": "-editor.action.moveLinesUpAction",
-      "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-      "key": "ctrl+alt+pagedown",
-      "command": "editor.action.moveLinesDownAction",
-      "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-      "key": "alt+down",
-      "command": "-editor.action.moveLinesDownAction",
-      "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-      "key": "shift+ctrl+shift+alt+pageup",
-      "command": "editor.action.copyLinesUpAction",
-      "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-      "key": "ctrl+shift+alt+up",
-      "command": "-editor.action.copyLinesUpAction",
-      "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-      "key": "shift+ctrl+shift+alt+pagedown",
-      "command": "editor.action.copyLinesDownAction",
-      "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-      "key": "ctrl+shift+alt+down",
-      "command": "-editor.action.copyLinesDownAction",
-      "when": "editorTextFocus && !editorReadonly"
   },
   {
       "key": "shift+alt+end",
