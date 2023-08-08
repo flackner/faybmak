@@ -214,26 +214,6 @@
       "when": "editorTextFocus"
   },
   {
-      "key": "up",
-      "command": "multiCommand.upWithFocus",
-      "when": "listFocus && !inputFocus && focusedView == 'outline'"
-  },
-  {
-      "key": "down",
-      "command": "multiCommand.downWithFocus",
-      "when": "listFocus && !inputFocus && focusedView == 'outline'"
-  },
-  {
-      "key": "down",
-      "command": "-list.focusDown",
-      "when": "listFocus && !inputFocus && focusedView == 'outline'"
-  },
-  {
-      "key": "up",
-      "command": "-list.focusUp",
-      "when": "listFocus && !inputFocus && focusedView == 'outline'"
-  },
-  {
       "key": "ctrl+m",
       "command": "-editor.action.toggleTabFocusMode"
   },
@@ -390,5 +370,105 @@
       "key": "shift+alt+left",
       "command": "-editor.action.smartSelect.shrink",
       "when": "editorTextFocus"
-  }
+},
+{
+    "key": "ctrl+e",
+    "command": "breadcrumbs.focusAndSelect",
+    "when": "breadcrumbsPossible && breadcrumbsVisible"
+},
+{
+    "key": "ctrl+shift+oem_period",
+    "command": "-breadcrumbs.focusAndSelect",
+    "when": "breadcrumbsPossible && breadcrumbsVisible"
+},
+{
+    "key": "t",
+    "command": "breadcrumbs.focusNext",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+},
+{
+    "key": "right",
+    "command": "-breadcrumbs.focusNext",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+},
+{
+    "key": "r",
+    "command": "breadcrumbs.focusPrevious",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+},
+{
+    "key": "left",
+    "command": "-breadcrumbs.focusPrevious",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+},
+{
+    "key": "s",
+    "command": "breadcrumbs.selectFocused",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+},
+{
+    "key": "down",
+    "command": "-breadcrumbs.selectFocused",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+},
+{
+    "key": "r",
+    "command": "list.collapse",
+    "when": "listFocus && treeElementCanCollapse && !inputFocus || listFocus && treeElementHasParent && !inputFocus"
+},
+{
+    "key": "left",
+    "command": "-list.collapse",
+    "when": "listFocus && treeElementCanCollapse && !inputFocus || listFocus && treeElementHasParent && !inputFocus"
+},
+{
+    "key": "t",
+    "command": "list.expand",
+    "when": "listFocus && treeElementCanExpand && !inputFocus || listFocus && treeElementHasChild && !inputFocus"
+},
+{
+    "key": "right",
+    "command": "-list.expand",
+    "when": "listFocus && treeElementCanExpand && !inputFocus || listFocus && treeElementHasChild && !inputFocus"
+},
+{
+    "key": "s",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+},
+{
+    "key": "down",
+    "command": "-list.focusDown",
+    "when": "listFocus && !inputFocus"
+},
+{
+    "key": "c",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
+},
+{
+    "key": "up",
+    "command": "-list.focusUp",
+    "when": "listFocus && !inputFocus"
+},
+{
+    "key": "c",
+    "command": "multiCommand.upWithFocus",
+    "when": "listFocus && !inputFocus && focusedView == 'outline'"
+},
+{
+    "key": "s",
+    "command": "multiCommand.downWithFocus",
+    "when": "listFocus && !inputFocus && focusedView == 'outline'"
+},
+{
+    "key": "c",
+    "command": "-list.focusDown",
+    "when": "listFocus && !inputFocus && focusedView == 'outline'"
+},
+{
+    "key": "s",
+    "command": "-list.focusUp",
+    "when": "listFocus && !inputFocus && focusedView == 'outline'"
+},
 ]
