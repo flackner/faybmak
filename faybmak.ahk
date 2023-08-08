@@ -278,7 +278,7 @@ SC01F::r
 SC020::s
 SC021::t
 SC022::g
-SC023::^Up
+SC023::^PgUp
 SC024::m
 SC025::n
 SC026::e
@@ -291,7 +291,7 @@ SC02d::f
 SC02e::d
 SC02f::v
 SC030::x
-SC031::^Down
+SC031::^PgDn
 SC032::k
 SC033::h
 SC034::ü
