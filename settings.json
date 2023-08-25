@@ -1,163 +1,146 @@
 {
-    "security.workspace.trust.untrustedFiles": "newWindow",
-    "terminal.integrated.scrollback": 1000000,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.suggestOnTriggerCharacters": false,
-    "editor.quickSuggestions": {
-        "other": false,
-        "comments": false,
-        "strings": false
-    },
-    "search.searchEditor.defaultNumberOfContextLines": 0,
-    "editor.lineNumbers": "relative",
-    "workbench.reduceMotion": "off",
-    "multiCommand.commands": [
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "terminal.integrated.scrollback": 1000000,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "search.searchEditor.defaultNumberOfContextLines": 0,
+  "editor.lineNumbers": "relative",
+  "workbench.reduceMotion": "off",
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.upLineKeepCursor",
+      "sequence": [
         {
-            "command": "multiCommand.upLineKeepCursor",
-            "sequence": [
-                {
-                    "command": "editorScroll",
-                    "args": {
-                        "to": "up",
-                        "by": "wrappedLine",
-                        "value": 10
-                    }
-                },
-                {
-                    "command": "cursorMove",
-                    "args": {
-                        "to": "up",
-                        "by": "wrappedLine",
-                        "value": 10
-                    }
-                }
-            ]
+          "command": "editorScroll",
+          "args": {
+            "to": "up",
+            "by": "wrappedLine",
+            "value": 10
+          }
         },
         {
-            "command": "multiCommand.downLineKeepCursor",
-            "sequence": [
-                {
-                    "command": "editorScroll",
-                    "args": {
-                        "to": "down",
-                        "by": "wrappedLine",
-                        "value": 10
-                    }
-                },
-                {
-                    "command": "cursorMove",
-                    "args": {
-                        "to": "down",
-                        "by": "wrappedLine",
-                        "value": 10
-                    }
-                }
-            ]
-        },
-        {
-            "command": "multiCommand.upLine",
-            "sequence": [
-                {
-                    "command": "cursorMove",
-                    "args": {
-                        "to": "up",
-                        "by": "wrappedLine",
-                        "value": 10
-                    }
-                }
-            ]
-        },
-        {
-            "command": "multiCommand.downLine",
-            "sequence": [
-                {
-                    "command": "cursorMove",
-                    "args": {
-                        "to": "down",
-                        "by": "wrappedLine",
-                        "value": 10
-                    }
-                }
-            ]
-        },
-        {
-            "command": "multiCommand.upLineKeepCursorSelect",
-            "sequence": [
-                {
-                    "command": "editorScroll",
-                    "args": {
-                        "to": "up",
-                        "by": "wrappedLine",
-                        "value": 10
-                    }
-                },
-                {
-                    "command": "cursorMove",
-                    "args": {
-                        "to": "up",
-                        "by": "wrappedLine",
-                        "value": 10,
-                        "select": true
-                    }
-                }
-            ]
-        },
-        {
-            "command": "multiCommand.downLineKeepCursorSelect",
-            "sequence": [
-                {
-                    "command": "editorScroll",
-                    "args": {
-                        "to": "down",
-                        "by": "wrappedLine",
-                        "value": 10
-                    }
-                },
-                {
-                    "command": "cursorMove",
-                    "args": {
-                        "to": "down",
-                        "by": "wrappedLine",
-                        "value": 10,
-                        "select": true
-                    }
-                }
-            ]
-        },
-        {
-            "command": "multiCommand.upWithFocus",
-            "sequence": [
-                {
-                    "command": "list.focusUp"
-                },
-                {
-                    "command": "list.selectAndPreserveFocus"
-                }
-            ]
-        },
-        {
-            "command": "multiCommand.downWithFocus",
-            "sequence": [
-                {
-                    "command": "list.focusDown"
-                },
-                {
-                    "command": "list.selectAndPreserveFocus"
-                }
-            ]
+          "command": "cursorMove",
+          "args": {
+            "to": "up",
+            "by": "wrappedLine",
+            "value": 10
+          }
         }
-    ],
-    "editor.smoothScrolling": true,
-    "scrollToCursor.offset": 10,
-    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
-    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
-    "workbench.colorCustomizations": {
-        "editor.selectionBackground": "#56036b", //Current SELECTED text
-        "editor.selectionHighlightBackground": "#494949", //same content as the selection
-        "editor.findMatchBackground": "#23422fe0", //Current SEARCH MATCH
-        "editor.findMatchHighlightBackground": "#ff7b00a1" //Other SEARCH MATCHES
+      ]
     },
-    "editor.semanticHighlighting.enabled": true,
-    "cSpell.enabled": false,
-    "colormate.ignoredLanguages": []
+    {
+      "command": "multiCommand.downLineKeepCursor",
+      "sequence": [
+        {
+          "command": "editorScroll",
+          "args": {
+            "to": "down",
+            "by": "wrappedLine",
+            "value": 10
+          }
+        },
+        {
+          "command": "cursorMove",
+          "args": {
+            "to": "down",
+            "by": "wrappedLine",
+            "value": 10
+          }
+        }
+      ]
+    },
+    {
+      "command": "multiCommand.scrollToCursorDown",
+      "interval": 100,
+      "sequence": [
+        {
+          "command": "scroll-to-cursor.scroll",
+        },
+        {
+          "command": "editorScroll",
+          "args": {
+            "to": "up",
+            "by": "wrappedLine",
+            "value": 30
+          }
+        }
+      ]
+    },
+    {
+      "command": "multiCommand.upLineKeepCursorSelect",
+      "sequence": [
+        {
+          "command": "editorScroll",
+          "args": {
+            "to": "up",
+            "by": "wrappedLine",
+            "value": 10
+          }
+        },
+        {
+          "command": "cursorMove",
+          "args": {
+            "to": "up",
+            "by": "wrappedLine",
+            "value": 10,
+            "select": true
+          }
+        }
+      ]
+    },
+    {
+      "command": "multiCommand.downLineKeepCursorSelect",
+      "sequence": [
+        {
+          "command": "editorScroll",
+          "args": {
+            "to": "down",
+            "by": "wrappedLine",
+            "value": 10
+          }
+        },
+        {
+          "command": "cursorMove",
+          "args": {
+            "to": "down",
+            "by": "wrappedLine",
+            "value": 10,
+            "select": true
+          }
+        }
+      ]
+    },
+    {
+      "command": "multiCommand.upWithFocus",
+      "sequence": [
+        {
+          "command": "list.focusUp"
+        },
+        {
+          "command": "list.selectAndPreserveFocus"
+        }
+      ]
+    },
+    {
+      "command": "multiCommand.downWithFocus",
+      "sequence": [
+        {
+          "command": "list.focusDown"
+        },
+        {
+          "command": "list.selectAndPreserveFocus"
+        }
+      ]
+    }
+  ],
+  "editor.smoothScrolling": true,
+  "scrollToCursor.offset": 10,
+  "workbench.iconTheme": "file-icons",
+  "editor.semanticHighlighting.enabled": true,
+  "workbench.colorTheme": "faybtheme",
 }
