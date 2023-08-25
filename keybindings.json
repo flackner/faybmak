@@ -1,19 +1,8 @@
 [
     {
-        "key": "[KeyY]",
-        "command": "type",
-        "args": { "text": "\t" },
-        "when": "editorTextFocus"
-    },
-    {
         "key": "Tab",
         "command": "type",
         "args": { "text": "" },
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+[KeyY]",
-        "command": "outdent",
         "when": "editorTextFocus"
     },
     {
@@ -22,14 +11,20 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+[KeyY]",
-        "command": "workbench.action.nextEditor",
-        "when": "!activeEditorGroupEmpty"
+        "key": "[KeyY]",
+        "command": "editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
     },
     {
-        "key": "ctrl+shift+[KeyY]",
-        "command": "workbench.action.previousEditor",
-        "when": "!activeEditorGroupEmpty"
+        "key": "shift+[KeyY]",
+        "command": "editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+    },
+    {
+        "key": "ctrl+[KeyY]",
+        "command": "type",
+        "args": { "text": "\t" },
+        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
     },
     {
         "key": "alt+left",
@@ -226,6 +221,90 @@
         "when": "editorTextFocus"
     },
     {
+        "key": "alt+pageup",
+        "command": "cursorMove",
+        "args": {
+            "to": "up",
+            "by": "wrappedLine",
+            "value": 3
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+pagedown",
+        "command": "cursorMove",
+        "args": {
+            "to": "down",
+            "by": "wrappedLine",
+            "value": 3
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+pageup",
+        "command": "cursorMove",
+        "args": {
+            "to": "up",
+            "by": "wrappedLine",
+            "value": 3,
+            "select": true
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+pagedown",
+        "command": "cursorMove",
+        "args": {
+            "to": "down",
+            "by": "wrappedLine",
+            "value": 3,
+            "select": true
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+ctrl+pageup",
+        "command": "cursorMove",
+        "args": {
+            "to": "up",
+            "by": "wrappedLine",
+            "value": 6
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+ctrl+pagedown",
+        "command": "cursorMove",
+        "args": {
+            "to": "down",
+            "by": "wrappedLine",
+            "value": 6
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+ctrl+pageup",
+        "command": "cursorMove",
+        "args": {
+            "to": "up",
+            "by": "wrappedLine",
+            "value": 6,
+            "select": true
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+ctrl+pagedown",
+        "command": "cursorMove",
+        "args": {
+            "to": "down",
+            "by": "wrappedLine",
+            "value": 6,
+            "select": true
+        },
+        "when": "editorTextFocus"
+    },
+    {
         "key": "ctrl+shift+up",
         "command": "multiCommand.upLineKeepCursorSelect",
         "when": "editorTextFocus"
@@ -236,34 +315,19 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+[Slash]",
+        "key": "ctrl+alt+numpad_add",
         "command": "scroll-to-cursor.scroll",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+numpad_subtract",
+        "command": "multiCommand.scrollToCursorDown",
         "when": "editorTextFocus"
     },
     {
         "key": "ctrl+l",
         "command": "-scroll-to-cursor.scroll",
         "when": "editorTextFocus"
-    },
-    {
-        "key": "up",
-        "command": "multiCommand.upWithFocus",
-        "when": "listFocus && !inputFocus && focusedView == 'outline'"
-    },
-    {
-        "key": "down",
-        "command": "multiCommand.downWithFocus",
-        "when": "listFocus && !inputFocus && focusedView == 'outline'"
-    },
-    {
-        "key": "down",
-        "command": "-list.focusDown",
-        "when": "listFocus && !inputFocus && focusedView == 'outline'"
-    },
-    {
-        "key": "up",
-        "command": "-list.focusUp",
-        "when": "listFocus && !inputFocus && focusedView == 'outline'"
     },
     {
         "key": "ctrl+m",
@@ -304,7 +368,7 @@
         "command": "editor.unfoldRecursively"
     },
     {
-        "key": "ctrl+alt+end",
+        "key": "ctrl+alt+down",
         "command": "editor.action.moveSelectionToNextFindMatch",
         "when": "editorFocus"
     },
@@ -314,7 +378,7 @@
         "when": "editorFocus"
     },
     {
-        "key": "ctrl+alt+home",
+        "key": "ctrl+alt+up",
         "command": "editor.action.moveSelectionToPreviousFindMatch"
     },
     {
@@ -360,59 +424,11 @@
         "command": "workbench.action.previousSideBarView"
     },
     {
-        "key": "ctrl+shift+alt+left",
-        "command": "editor.action.moveCarretLeftAction"
-    },
-    {
-        "key": "ctrl+shift+alt+right",
-        "command": "editor.action.moveCarretRightAction"
-    },
-    {
         "key": "alt+home",
         "command": "editor.action.commentLine"
     },
     {
-        "key": "ctrl+alt+pageup",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+up",
-        "command": "-editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+alt+pagedown",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+down",
-        "command": "-editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+ctrl+shift+alt+pageup",
-        "command": "editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+alt+up",
-        "command": "-editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+ctrl+shift+alt+pagedown",
-        "command": "editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+alt+down",
-        "command": "-editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+end",
+        "key": "ctrl+alt+end",
         "command": "editor.action.smartSelect.expand",
         "when": "editorTextFocus"
     },
@@ -422,7 +438,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+alt+home",
+        "key": "ctrl+alt+home",
         "command": "editor.action.smartSelect.shrink",
         "when": "editorTextFocus"
     },
@@ -430,5 +446,125 @@
         "key": "shift+alt+left",
         "command": "-editor.action.smartSelect.shrink",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "breadcrumbs.focusAndSelect",
+        "when": "breadcrumbsPossible && breadcrumbsVisible"
+    },
+    {
+        "key": "ctrl+shift+oem_period",
+        "command": "-breadcrumbs.focusAndSelect",
+        "when": "breadcrumbsPossible && breadcrumbsVisible"
+    },
+    {
+        "key": "t",
+        "command": "breadcrumbs.focusNext",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "right",
+        "command": "-breadcrumbs.focusNext",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "r",
+        "command": "breadcrumbs.focusPrevious",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "left",
+        "command": "-breadcrumbs.focusPrevious",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "s",
+        "command": "breadcrumbs.selectFocused",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "down",
+        "command": "-breadcrumbs.selectFocused",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "r",
+        "command": "list.collapse",
+        "when": "listFocus && treeElementCanCollapse && !inputFocus || listFocus && treeElementHasParent && !inputFocus"
+    },
+    {
+        "key": "left",
+        "command": "-list.collapse",
+        "when": "listFocus && treeElementCanCollapse && !inputFocus || listFocus && treeElementHasParent && !inputFocus"
+    },
+    {
+        "key": "t",
+        "command": "list.expand",
+        "when": "listFocus && treeElementCanExpand && !inputFocus || listFocus && treeElementHasChild && !inputFocus"
+    },
+    {
+        "key": "right",
+        "command": "-list.expand",
+        "when": "listFocus && treeElementCanExpand && !inputFocus || listFocus && treeElementHasChild && !inputFocus"
+    },
+    {
+        "key": "s",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "down",
+        "command": "-list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "c",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "up",
+        "command": "-list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "c",
+        "command": "multiCommand.upWithFocus",
+        "when": "listFocus && !inputFocus && focusedView == 'outline'"
+    },
+    {
+        "key": "s",
+        "command": "multiCommand.downWithFocus",
+        "when": "listFocus && !inputFocus && focusedView == 'outline'"
+    },
+    {
+        "key": "c",
+        "command": "-list.focusDown",
+        "when": "listFocus && !inputFocus && focusedView == 'outline'"
+    },
+    {
+        "key": "s",
+        "command": "-list.focusUp",
+        "when": "listFocus && !inputFocus && focusedView == 'outline'"
+    },
+    {
+        "key": "alt+pageup",
+        "command": "-scrollPageUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+pagedown",
+        "command": "-scrollPageDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
     }
 ]
