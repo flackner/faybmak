@@ -20,7 +20,7 @@
           "args": {
             "to": "up",
             "by": "wrappedLine",
-            "value": 10
+            "value": 20
           }
         },
         {
@@ -28,7 +28,7 @@
           "args": {
             "to": "up",
             "by": "wrappedLine",
-            "value": 10
+            "value": 20
           }
         }
       ]
@@ -41,7 +41,7 @@
           "args": {
             "to": "down",
             "by": "wrappedLine",
-            "value": 10
+            "value": 20
           }
         },
         {
@@ -49,7 +49,7 @@
           "args": {
             "to": "down",
             "by": "wrappedLine",
-            "value": 10
+            "value": 20
           }
         }
       ]
