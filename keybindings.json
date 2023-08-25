@@ -1,32 +1,5 @@
 [
     {
-        "key": "Tab",
-        "command": "type",
-        "args": { "text": "" },
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+tab",
-        "command": "-outdent",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "[KeyY]",
-        "command": "editor.action.indentLines",
-        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
-    },
-    {
-        "key": "shift+[KeyY]",
-        "command": "editor.action.outdentLines",
-        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
-    },
-    {
-        "key": "ctrl+[KeyY]",
-        "command": "type",
-        "args": { "text": "\t" },
-        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
-    },
-    {
         "key": "alt+left",
         "command": "workbench.action.navigateBack",
         "when": "canNavigateBack"
@@ -302,16 +275,6 @@
             "value": 6,
             "select": true
         },
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+up",
-        "command": "multiCommand.upLineKeepCursorSelect",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+down",
-        "command": "multiCommand.downLineKeepCursorSelect",
         "when": "editorTextFocus"
     },
     {
