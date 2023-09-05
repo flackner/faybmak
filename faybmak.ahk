@@ -1,4 +1,4 @@
-#Persistent
+﻿#Persistent
 #MaxHotkeysPerInterval 999999999
 faybmakIsActive := true
 
@@ -19,7 +19,7 @@ return
 
 ; side click left
 ; NumpadLeft::Send, {LAlt Down}{Right}{LAlt Up}
-NumpadLeft::Send, {LCtrl Down}f{LCtrl Up}
+; NumpadLeft::Send, {LCtrl Down}f{LCtrl Up}
 ; side click right
 ; NumpadRight::Send, {LAlt Down}{Left}{LAlt Up}
 ; side wheel up
@@ -47,13 +47,16 @@ NumpadPgUp::Send, {Click, Middle}
 
 #If (faybmakIsActive)
 
+; side click left
+*NumpadLeft::Sym := true
+*NumpadLeft Up::Sym := false
+
 ; side click right
 *NumpadRight::Cur := true
 *NumpadRight Up::Cur := false
 
 *CapsLock::LControl
 *SC01B::RShift
-*SC136::LWin
         
 *SC138::Cur := true
 *SC138 Up::Cur := false
@@ -68,31 +71,37 @@ Cur := false
 Sym := false
 return
 
+*SC023::Send, {LCtrl Down}{LAlt Down}
+*SC023 Up::Send, {LAlt Up}{LCtrl Up}
+
+*SC031::LWin
+
+*SC136::Send, {LAlt Down}{LWin Down}
+*SC136 Up::Send, {LWin Up}{LAlt Up}
+
 *SC02B::Sym := true
 *SC02B Up::Sym := false
 
-SC00E::Return ; just for the moment
-
 #If (faybmakIsActive and Cur and Sym)
 
-SC002::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
-SC003::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
-SC004::^z
-SC005::^y
-SC006::!F4
-SC007::#6
-SC008::#7
-SC009::#8
-SC00A::#9
-SC00B::#0
-SC00C::Return
-SC00D::Return
+SC002::F1
+SC003::F2
+SC004::F3
+SC005::F4
+SC006::F5
+SC007::F6
+SC008::F7
+SC009::F8
+SC00A::F9
+SC00B::F10
+SC00C::F11
+SC00D::F12
 
 SC010::BackSpace
 SC011::Delete
-SC012::!Up
-SC013::!Left
-SC014::!Right
+SC012::^!Up
+SC013::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
+SC014::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
 SC015::Return
 SC016::Return
 SC017::7
@@ -100,23 +109,23 @@ SC018::8
 SC019::9
 SC01A::BackSpace
 
-SC01E::^PgUp
-SC01F::!^Home
-SC020::!Down
-SC021::!^End
-SC022::^PgDn
+SC01E::!^Home
+SC01F::!Home
+SC020::!^Down
+SC021::!End
+SC022::!^End
 SC023::Return
-SC024::0
+SC024::.
 SC025::4
 SC026::5
 SC027::6
-SC028::.
+SC028::0
 
 SC056::Return
 SC02c::Return
 SC02d::Return
-SC02e::!^PgUp
-SC02f::!^PgDn
+SC02e::!^PgDn
+SC02f::!^PgUp
 SC030::Return
 SC031::Return
 SC032::1
@@ -136,16 +145,16 @@ SC006::^#5
 SC007::^#6
 SC008::^#7
 SC009::^#8
-SC00A::^#9
-SC00B::^#0
-SC00C::Return
-SC00D::Return
+SC00A::!F4
+SC00B::!^-
+SC00C::!^+
+SC00D::+F10
 
-SC010::!Left
+SC010::^PgUp
 SC011::Left
 SC012::Up
 SC013::Right
-SC014::!Right
+SC014::^PgDn
 SC015::Return
 SC016::Return
 SC017::Return
@@ -176,33 +185,35 @@ SC028::'
 SC056::$
 SC02c::Return
 SC02d::Return
-SC02e::PgUp
-SC02f::PgDn
+SC02e::!PgDn
+SC02f::!PgUp
 SC030::"
 SC031::Return
-SC032::!^k
-SC033::Return
+SC032::{
+SC033::}
 SC034::Return
 SC035::Return
 
 SC039::^Delete
++SC039::Send, {Delete}
 
 #If (faybmakIsActive and !Cur and Sym)
 
-SC002::^1
-SC003::^2
-SC004::^3
-SC005::^4
-SC006::^5
-SC007::^6
-SC008::^7
-SC009::^8
-SC00A::^9
-SC00B::^0
+SC002::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 0 | Switch-Desktop",, Hide
+SC003::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 1 | Switch-Desktop",, Hide
+;if WinExist("Windows PowerShell") WinActivate SendInput, Get-Desktop 1 | Switch-Desktop{enter}
+SC004::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 2 | Switch-Desktop",, Hide
+SC005::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 3 | Switch-Desktop",, Hide
+SC006::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 4 | Switch-Desktop",, Hide
+SC007::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 5 | Switch-Desktop",, Hide
+SC008::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 6 | Switch-Desktop",, Hide
+SC009::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 7 | Switch-Desktop",, Hide
+SC00A::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 8 | Switch-Desktop",, Hide
+SC00B::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 9 | Switch-Desktop",, Hide
 SC00C::Return
 SC00D::Return
 
-SC010::#
+SC010::~
 SC011::!
 SC012::/
 SC013::&
@@ -238,7 +249,7 @@ SC02f::,
 +SC02f::Send {´}
 SC030::?
 SC031::Return
-SC032::~
+SC032::#
 SC033::ß
 SC034::Return
 SC035::Return
@@ -248,18 +259,18 @@ SC039::Send {=}
 #If (faybmakIsActive and !Cur and !Sym)
 
 SC029::#e
-SC002::F1
-SC003::F2
-SC004::F3
-SC005::F4
+SC002::Send, {LAlt Down}{Left}{LAlt Up}
+SC003::Send, {LAlt Down}{Right}{LAlt Up}
+SC004::^z
+SC005::^y
 SC006::F5
 SC007::F6
 SC008::F7
 SC009::F8
 SC00A::F9
-SC00B::F10
-SC00C::F11
-SC00D::F12
+SC00B::PgDn
+SC00C::PgUp
+SC00D::Return
 
 SC010::q
 SC011::w
@@ -278,7 +289,6 @@ SC01F::r
 SC020::s
 SC021::t
 SC022::g
-SC023::^PgUp
 SC024::m
 SC025::n
 SC026::e
@@ -286,16 +296,15 @@ SC027::i
 SC028::o
 
 SC056::z
-SC02c::ö
+SC02c::ä
 SC02d::f
 SC02e::d
 SC02f::v
 SC030::x
-SC031::^PgDn
 SC032::k
 SC033::h
 SC034::ü
-SC035::ä
+SC035::ö
 
 +SC039::Send {_}
 
