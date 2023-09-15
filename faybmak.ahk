@@ -145,10 +145,11 @@ SC006::^#5
 SC007::^#6
 SC008::^#7
 SC009::^#8
-SC00A::!F4
+SC00A::^#9
 SC00B::!^-
 SC00C::!^+
 SC00D::+F10
+SC00E::!F4
 
 SC010::^PgUp
 SC011::Left
@@ -237,7 +238,7 @@ SC023::Return
 SC024::Return
 SC025::<
 SC026::>
-SC027::@
+SC027::ß
 SC028::Return
 
 SC056::\
@@ -250,7 +251,7 @@ SC02f::,
 SC030::?
 SC031::Return
 SC032::#
-SC033::ß
+SC033::@
 SC034::Return
 SC035::Return
 
@@ -270,7 +271,7 @@ SC009::F8
 SC00A::F9
 SC00B::PgDn
 SC00C::PgUp
-SC00D::Return
+SC00D::#t
 
 SC010::q
 SC011::w
