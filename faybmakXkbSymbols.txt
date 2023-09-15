@@ -1,3 +1,4 @@
+
 // faybmak
 // 1. space + shift does not work if kdb uses meta + space for layout switch
 
@@ -442,7 +443,7 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <AC10> {
-    symbols[Group1]= [              i,              I,       NoSymbol,       NoSymbol,             at,       NoSymbol,              6,       NoSymbol ],
+    symbols[Group1]= [              i,              I,       NoSymbol,       NoSymbol,         ssharp,       NoSymbol,              6,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -518,7 +519,7 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <AB08> {
-    symbols[Group1]= [              h,              H,     braceright,       NoSymbol,        ssharp,       NoSymbol,              2,       NoSymbol ],
+    symbols[Group1]= [              h,              H,     braceright,       NoSymbol,             at,       NoSymbol,              2,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
