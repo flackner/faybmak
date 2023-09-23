@@ -2,7 +2,7 @@
 This is a layered and modified version of the angle-mod wide ISO Colemak-DH layout.
 
 ```
-   Layer 0 + 1
+   Layer 0 (upper row is shifted character)
    ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
    │     │     │     │     │     │     │     │     │     │     │     │     │     ┃         ┃
    │     │BACK │FWD  │UNDO │REDO │ F5  │ F6  │ F7  │ F8  │ F9  │PGDN │PGUP │MENU ┃ BS      ┃
@@ -20,7 +20,7 @@ This is a layered and modified version of the angle-mod wide ISO Colemak-DH layo
    ┃       ┃ Win   ┃ Alt   ┃           SP                      ┃ L4   ┃      ┃ Ctrl ┃      ┃
    ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━┻━━━━━━┻━━━━━━┻━━━━━━┛
 
-   Layer 2 + 3
+   Layer 1 (upper row is shifted character)
    ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
    │     │     │     │     │     │     │     │     │     │     │     │     │     ┃         ┃
    │     │ ^1  │ ^2  │ ^3  │ ^4  │ ^5  │ ^6  │ ^7  │ ^8  │ ^9  │ ^-  │^+   │     ┃         ┃
@@ -38,7 +38,7 @@ This is a layered and modified version of the angle-mod wide ISO Colemak-DH layo
    ┃       ┃ Win   ┃ Alt   ┃           =                       ┃ L4   ┃      ┃ Ctrl ┃      ┃
    ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━┻━━━━━━┻━━━━━━┻━━━━━━┛
 
-   Layer 4 + 5 (^=Ctrl, !=Alt, #=Win, +=Shift)
+   Layer 2 (^=Ctrl, !=Alt, #=Win, +=Shift)
    ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
    │     │     │     │     │     │     │     │     │     │     │     │     │     ┃         ┃
    │     │ #1  │ #2  │ #3  │ #4  │ #5  │ #6  │ #7  │ #8  │ #9  │ ^!- │ ^!+ │+F10 ┃Alt + F4 ┃
@@ -57,7 +57,7 @@ This is a layered and modified version of the angle-mod wide ISO Colemak-DH layo
    ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━┻━━━━━━┻━━━━━━┻━━━━━━┛
 
 
-   Layer 6 + 7 (^=Ctrl, !=Alt, #=Win, +=Shift) (upper row contains combo modifiers)
+   Layer 3 (^=Ctrl, !=Alt, #=Win, +=Shift) (upper row contains combo modifiers)
    ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
    │     │     │     │     │     │     │     │     │     │     │     │     │     ┃         ┃
    │     │ F1  │ F2  │ F3  │ F4  │ F5  │ F6  │ F7  │ F8  │ F9  │ F10 │ F11 │ F12 ┃         ┃
