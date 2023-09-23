@@ -57,7 +57,7 @@ This is a layered and modified version of the angle-mod wide ISO Colemak-DH layo
    ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━┻━━━━━━┻━━━━━━┻━━━━━━┛
 
 
-   Layer 3 (^=Ctrl, !=Alt, #=Win, +=Shift) (upper row contains combo modifiers)
+   Layer 3 (upper row contains combo modifiers) (also reachedable with L1+L2)
    ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
    │     │     │     │     │     │     │     │     │     │     │     │     │     ┃         ┃
    │     │ F1  │ F2  │ F3  │ F4  │ F5  │ F6  │ F7  │ F8  │ F9  │ F10 │ F11 │ F12 ┃         ┃
