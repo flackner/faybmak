@@ -44,7 +44,7 @@ This is a layered and modified version of the angle-mod wide ISO Colemak-DH layo
    │     │ #1  │ #2  │ #3  │ #4  │ #5  │ #6  │ #7  │ #8  │ #9  │ ^!- │ ^!+ │+F10 ┃ !F4     ┃
    ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
    ┃       ┃     │     │     │     │     │     │     │     │     │     │     │     ┃       ┃
-   ┃ L3    ┃^PGDN│RGHT │UP   │LEFT │^PGUP│     │     │     │ [   │ ]   │ ESC │Shift┃ Enter ┃
+   ┃ L3    ┃^PGDN│LEFT │UP   │RGHT │^PGUP│     │     │     │ [   │ ]   │ ESC │Shift┃ Enter ┃
    ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
    ┃        ┃     │     │     │     │     │Ctrl+│     │     │     │     │     │     ┃      ┃
    ┃ Ctrl   ┃HOME │^LEFT│ DN  │^RGHT│ END │ Alt │     │ (   │ )   │ Tab │ '   │ L1  ┃      ┃
