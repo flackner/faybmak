@@ -233,7 +233,7 @@ SC020::*
 +SC020::Send {°}
 SC021::.
 +SC021::Send {§}
-SC022:::
+SC022::,
 SC023::Return
 SC024::Return
 SC025::<
@@ -246,7 +246,7 @@ SC02c::^
 SC02d::SendInput, `%
 SC02e::;
 +SC02e::SendInput, ``
-SC02f::,
+SC02f::=
 +SC02f::Send {´}
 SC030::?
 SC031::Return
@@ -255,7 +255,7 @@ SC033::@
 SC034::Return
 SC035::Return
 
-SC039::Send {=}
+SC039::Send {:}
 
 #If (faybmakIsActive and !Cur and !Sym)
 
