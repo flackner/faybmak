@@ -99,7 +99,7 @@ xkb_symbols "faybmak" {
     key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC";
 
     key <SPCE> {
-    symbols[Group1]= [          space,     underscore,       NoSymbol,       NoSymbol,          equal,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [          space,     underscore,       NoSymbol,       NoSymbol,          colon,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -416,7 +416,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<END>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Alt) ] };
 
     key <AC05> {
-    symbols[Group1]= [              g,              G,       NoSymbol,       NoSymbol,       	colon,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              g,              G,       NoSymbol,       NoSymbol,       	comma,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -490,7 +490,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<PGDN>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control+Alt) ] };
 
     key <AB04> {
-    symbols[Group1]= [              v,              V,       NoSymbol,       NoSymbol,          comma,          grave,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              v,              V,       NoSymbol,       NoSymbol,          equal,          grave,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(), 
         NoAction(),
