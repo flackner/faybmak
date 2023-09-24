@@ -35,6 +35,7 @@
 // XF86ZoomIn
 // XF86AudioLowerVolume
 
+partial alphanumeric_keys modifier_keys
 xkb_symbols "faybmak" {
 
     name[Group1]= "English (faybmak)";
@@ -532,5 +533,7 @@ xkb_symbols "faybmak" {
     symbols[Group1]= [     odiaeresis,     Odiaeresis,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,         colon,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
+
+  include "level5(modifier_mapping)"
 
 };
