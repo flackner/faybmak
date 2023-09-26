@@ -434,17 +434,17 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <AC08> {
-    symbols[Group1]= [              n,              N,      parenleft,       NoSymbol,           less,       NoSymbol,              4,       NoSymbol ],
+    symbols[Group1]= [              n,              N,      parenleft,       NoSymbol,           less,       NoSymbol,              1,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AC09> {
-    symbols[Group1]= [              e,              E,     parenright,       NoSymbol,        greater,       NoSymbol,              5,       NoSymbol ],
+    symbols[Group1]= [              e,              E,     parenright,       NoSymbol,        greater,       NoSymbol,              2,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AC10> {
-    symbols[Group1]= [              i,              I,       NoSymbol,       NoSymbol,         ssharp,       NoSymbol,              6,       NoSymbol ],
+    symbols[Group1]= [              i,              I,       NoSymbol,       NoSymbol,         ssharp,       NoSymbol,              3,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -515,17 +515,17 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<END>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control+Alt+Shift) ] };
 
     key <AB07> {
-    symbols[Group1]= [              k,              K,      braceleft,       NoSymbol,     numbersign,       NoSymbol,             1,       NoSymbol ],
+    symbols[Group1]= [              k,              K,      braceleft,       NoSymbol,     numbersign,       NoSymbol,             4,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AB08> {
-    symbols[Group1]= [              h,              H,     braceright,       NoSymbol,             at,       NoSymbol,              2,       NoSymbol ],
+    symbols[Group1]= [              h,              H,     braceright,       NoSymbol,             at,       NoSymbol,              5,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AB09> {
-    symbols[Group1]= [     udiaeresis,     Udiaeresis,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,             3,       NoSymbol ],
+    symbols[Group1]= [     udiaeresis,     Udiaeresis,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,             6,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
@@ -534,6 +534,7 @@ xkb_symbols "faybmak" {
     actions[Group1]= [ 
         NoAction() ] };
 
-  include "level5(modifier_mapping)"
+  //include "level5(modifier_mapping)"
 
 };
+
