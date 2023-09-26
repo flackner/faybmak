@@ -116,9 +116,9 @@ SC021::!End
 SC022::!^End
 SC023::Return
 SC024::.
-SC025::1
-SC026::2
-SC027::3
+SC025::4
+SC026::5
+SC027::6
 SC028::0
 
 SC056::Return
@@ -128,9 +128,9 @@ SC02e::!^PgDn
 SC02f::!^PgUp
 SC030::Return
 SC031::Return
-SC032::4
-SC033::5
-SC034::6
+SC032::1
+SC033::2
+SC034::3
 SC035:::
 
 SC039::enter
