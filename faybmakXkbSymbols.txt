@@ -534,6 +534,6 @@ xkb_symbols "faybmak" {
     actions[Group1]= [ 
         NoAction() ] };
 
-  include "level5(modifier_mapping)"
+  //include "level5(modifier_mapping)"
 
 };
