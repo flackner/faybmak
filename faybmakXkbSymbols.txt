@@ -39,10 +39,12 @@ partial alphanumeric_keys modifier_keys
 xkb_symbols "faybmak" {
 
     name[Group1]= "English (faybmak)";
-    
+
+    //necessary for some ubuntu versions
+    //include "level5(modifier_mapping)" 
+
     key.type[Group1] = "ONE_LEVEL";
 
-    replace key <LCTL> { [ ISO_Level5_Shift ] };
     replace key <BKSL> { [ ISO_Level5_Shift ] };
 
     key <KP1> { [ 1 ] };
@@ -73,7 +75,7 @@ xkb_symbols "faybmak" {
         SetMods(modifiers=Shift) ] };
     
     replace key <CAPS> {
-        symbols[Group1]= [ NoSymbol ],
+        symbols[Group1]= [ LControl ],
         actions[Group1]= [
         SetMods(modifiers=Control) ] };
 
