@@ -70,12 +70,12 @@ xkb_symbols "faybmak" {
         SetMods(modifiers=Super+Alt) ] };
 
     replace key <AD12> {
-        symbols[Group1]= [ NoSymbol ],
+        symbols[Group1]= [ Shift_R ],
         actions[Group1]= [
         SetMods(modifiers=Shift) ] };
     
     replace key <CAPS> {
-        symbols[Group1]= [ LControl ],
+        symbols[Group1]= [ Control_L ],
         actions[Group1]= [
         SetMods(modifiers=Control) ] };
 
@@ -88,7 +88,7 @@ xkb_symbols "faybmak" {
         SetMods(modifiers=Control+Alt) ] };
 
     replace key <AB06> {
-        symbols[Group1]= [ NoSymbol ],
+        symbols[Group1]= [ Super_R ],
         actions[Group1]= [
         SetMods(modifiers=Super) ] };
 
