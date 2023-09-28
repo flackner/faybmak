@@ -1,5 +1,5 @@
 # faybmak
-This is a layered and modified version of the angle-mod wide ISO [Colemak-DH layout](https://colemakmods.github.io/mod-dh/) which was inspired by the [3l layout](https://github.com/jackrosenthal/threelayout).
+This is a layered and modified version of the angle-mod wide ISO [Colemak-DH layout](https://colemakmods.github.io/mod-dh/) inspired by the [3l layout](https://github.com/jackrosenthal/threelayout).
 
 ```
    Layer 0 (upper row is shifted character)
