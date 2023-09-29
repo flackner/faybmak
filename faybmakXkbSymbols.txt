@@ -128,8 +128,10 @@ xkb_symbols "faybmak" {
     key <TLDE> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
-        RedirectKey(key=<KP1>, modifiers=Alt+Super),
-        RedirectKey(key=<KP1>, modifiers=Alt+Super)] };
+        NoAction(),
+        NoAction(),
+        RedirectKey(key=<ESC>, clearmods=LevelThree),
+        RedirectKey(key=<ESC>, clearmods=LevelThree)] };
 
     key <AE01> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -454,12 +456,15 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<AD06>, clearmods=LevelThree) ] };
 
     key <AC11> {
-    symbols[Group1]= [              o,              O,     apostrophe,       NoSymbol,       NoSymbol,       NoSymbol,              0,       NoSymbol ],
+    symbols[Group1]= [              o,              O,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,              0,       NoSymbol ],
     actions[Group1]= [ 
-        NoAction() ] };
+        NoAction(),
+        NoAction(),
+        RedirectKey(key=<DELE>, clearmods=LevelThree),
+        RedirectKey(key=<DELE>, clearmods=LevelThree) ] };
 
     key <LSGT> {
-    symbols[Group1]= [              z,              Z,         dollar,       NoSymbol,      backslash,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              z,              Z,         dollar,     numbersign,      backslash,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -476,7 +481,7 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <AB02> {
-    symbols[Group1]= [              f,              F,       NoSymbol,       NoSymbol,        percent,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              f,              F,     apostrophe,       NoSymbol,        percent,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction()] };
 

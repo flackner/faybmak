@@ -181,11 +181,11 @@ SC025::Send, (
 SC026::Send, )
 +SC026::Send, {}}
 SC027::Tab
-SC028::'
+SC028::Delete
 
 SC056::$
 SC02c::Return
-SC02d::Return
+SC02d::'
 SC02e::!PgDn
 SC02f::!PgUp
 SC030::"
@@ -259,7 +259,7 @@ SC039::Send {:}
 
 #If (faybmakIsActive and !Cur and !Sym)
 
-SC029::#e
+SC029::Esc
 SC002::Send, {LAlt Down}{Left}{LAlt Up}
 SC003::Send, {LAlt Down}{Right}{LAlt Up}
 SC004::^z
