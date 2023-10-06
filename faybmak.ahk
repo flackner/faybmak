@@ -1,4 +1,4 @@
-﻿#Persistent
+#Persistent
 #MaxHotkeysPerInterval 999999999
 faybmakIsActive := true
 
@@ -137,15 +137,17 @@ SC039::enter
 
 #If (faybmakIsActive and Cur and !Sym)
 
-SC002::^#1
-SC003::^#2
-SC004::^#3
-SC005::^#4
-SC006::^#5
-SC007::^#6
-SC008::^#7
-SC009::^#8
-SC00A::^#9
+; use ^#1 to cycle through active tabs
+;if WinExist("Windows PowerShell") WinActivate SendInput, Get-Desktop 1 | Switch-Desktop{enter} ; maybe some server hack
+SC002::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 0 | Switch-Desktop",, Hide
+SC003::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 1 | Switch-Desktop",, Hide
+SC004::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 2 | Switch-Desktop",, Hide
+SC005::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 3 | Switch-Desktop",, Hide
+SC006::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 4 | Switch-Desktop",, Hide
+SC007::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 5 | Switch-Desktop",, Hide
+SC008::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 6 | Switch-Desktop",, Hide
+SC009::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 7 | Switch-Desktop",, Hide
+SC00A::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 8 | Switch-Desktop",, Hide
 SC00B::!^-
 SC00C::!^+
 SC00D::+F10
@@ -200,17 +202,16 @@ SC039::^Delete
 
 #If (faybmakIsActive and !Cur and Sym)
 
-SC002::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 0 | Switch-Desktop",, Hide
-SC003::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 1 | Switch-Desktop",, Hide
-;if WinExist("Windows PowerShell") WinActivate SendInput, Get-Desktop 1 | Switch-Desktop{enter}
-SC004::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 2 | Switch-Desktop",, Hide
-SC005::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 3 | Switch-Desktop",, Hide
-SC006::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 4 | Switch-Desktop",, Hide
-SC007::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 5 | Switch-Desktop",, Hide
-SC008::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 6 | Switch-Desktop",, Hide
-SC009::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 7 | Switch-Desktop",, Hide
-SC00A::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 8 | Switch-Desktop",, Hide
-SC00B::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 9 | Switch-Desktop",, Hide
+SC002::^1
+SC003::^2
+SC004::^3
+SC005::^4
+SC006::^5
+SC007::^6
+SC008::^7
+SC009::^8
+SC00A::^9
+SC00B::Return
 SC00C::Return
 SC00D::Return
 
