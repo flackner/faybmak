@@ -476,7 +476,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<HOME>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control+Alt+Shift) ] };
 
     key <AB01> {
-    symbols[Group1]= [     adiaeresis,     Adiaeresis,       NoSymbol,       NoSymbol,    asciicircum,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [     odiaeresis,     Odiaeresis,       NoSymbol,       NoSymbol,    asciicircum,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
@@ -537,7 +537,7 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <AB10> {
-    symbols[Group1]= [     odiaeresis,     Odiaeresis,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,         colon,       NoSymbol ],
+    symbols[Group1]= [     adiaeresis,     Adiaeresis,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,         colon,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
