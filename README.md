@@ -27,10 +27,10 @@ This is a layered and modified version of the angle-mod wide ISO [Colemak-DH lay
    ┃ L3    ┃ ~   │ !   │ /   │ &   │ |   │     │     │     │     │     │     │Shift┃ Enter ┃
    ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
    ┃        ┃     │ €   │ °   │ §   │     │Ctrl+│     │     │     │     │     │     ┃      ┃
-   ┃ Ctrl   ┃ -   │ +   │ *   │ .   │ ,   │ Alt │     │ <   │ >   │ ß   │     │ L1  ┃      ┃
+   ┃ Ctrl   ┃ -   │ +   │ *   │ .   │ ,   │ Alt │     │ <   │ >   │ ^   │     │ L1  ┃      ┃
    ┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
    ┃      ┃     │     │     │ ´   │ `   │     │     │     │     │     │     ┃              ┃
-   ┃Shift ┃ \   │ ^   │ %   │ ;   │ =   │ ?   │ WIN │ #   │ @   │     │     ┃ Win + Alt    ┃
+   ┃Shift ┃ \   │ ß   │ #   │ ;   │ =   │ ?   │ WIN │ %   │ @   │     │     ┃ Win + Alt    ┃
    ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
    ┃       ┃       ┃       ┃                                   ┃      ┃      ┃      ┃      ┃
    ┃       ┃ Win   ┃ Alt   ┃           :                       ┃ L2   ┃      ┃ Ctrl ┃      ┃
@@ -44,10 +44,10 @@ This is a layered and modified version of the angle-mod wide ISO [Colemak-DH lay
    ┃ L3    ┃^PGDN│LEFT │UP   │RGHT │^PGUP│     │     │     │ [   │ ]   │ ESC │Shift┃ Enter ┃
    ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
    ┃        ┃     │     │     │     │     │Ctrl+│     │     │     │     │     │     ┃      ┃
-   ┃ Ctrl   ┃HOME │^LEFT│ DN  │^RGHT│ END │ Alt │     │ (   │ )   │ Tab │ '   │ L1  ┃      ┃
+   ┃ Ctrl   ┃HOME │^LEFT│ DN  │^RGHT│ END │ Alt │     │ (   │ )   │ Tab │ DEL │ L1  ┃      ┃
    ┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
    ┃      ┃     │     │     │     │     │     │     │     │     │     │     ┃              ┃
-   ┃Shift ┃ $   │     │!PGUP│!PGDN│ "   │     │ WIN │ {   │ }   │     │     ┃ Win + Alt    ┃
+   ┃Shift ┃ $   │     │ '   │!PGUP│!PGDN│ "   │ WIN │ {   │ }   │     |     ┃ Win + Alt    ┃
    ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
    ┃       ┃       ┃       ┃            DEL                    ┃      ┃      ┃      ┃      ┃
    ┃       ┃ Win   ┃ Alt   ┃           ^DEL                    ┃ L2   ┃      ┃ Ctrl ┃      ┃
@@ -65,7 +65,7 @@ This is a layered and modified version of the angle-mod wide ISO [Colemak-DH lay
    ┃ Ctrl   ┃HOME │!HOME│DN   │!END │END  │ Alt │ .   │ 4   │ 5   │ 6   │ 0   │ L1  ┃      ┃
    ┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
    ┃      ┃^!+  │     │^!   │^!   │^!+  │     │     │     │     │     │     ┃              ┃
-   ┃Shift ┃HOME │     │PGUP │PGDN │ END │     │ WIN │ 1   │ 2   │ 3   │ :   ┃ Win + Alt    ┃
+   ┃Shift ┃HOME │     │     │PGUP │PGDN │ END │ WIN │ 1   │ 2   │ 3   │ :   ┃ Win + Alt    ┃
    ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
    ┃       ┃       ┃       ┃                                   ┃      ┃      ┃      ┃      ┃
    ┃       ┃ Win   ┃ Alt   ┃              ENTER                ┃ L2   ┃      ┃ Ctrl ┃      ┃
