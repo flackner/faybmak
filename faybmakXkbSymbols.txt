@@ -448,7 +448,7 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <AC10> {
-    symbols[Group1]= [              i,              I,       NoSymbol,       NoSymbol,         ssharp,       NoSymbol,              6,       NoSymbol ],
+    symbols[Group1]= [              i,              I,       NoSymbol,       NoSymbol,    asciicircum,       NoSymbol,              6,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(),
         NoAction(),
@@ -476,12 +476,12 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<HOME>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control+Alt+Shift) ] };
 
     key <AB01> {
-    symbols[Group1]= [     odiaeresis,     Odiaeresis,       NoSymbol,       NoSymbol,    asciicircum,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [     odiaeresis,     Odiaeresis,       NoSymbol,       NoSymbol,         ssharp,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 
     key <AB02> {
-    symbols[Group1]= [              f,              F,     apostrophe,       NoSymbol,        percent,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              f,              F,     apostrophe,       NoSymbol,     numbersign,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction()] };
 
@@ -522,7 +522,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<END>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control+Alt+Shift) ] };
 
     key <AB07> {
-    symbols[Group1]= [              k,              K,      braceleft,       NoSymbol,     numbersign,       NoSymbol,             1,       NoSymbol ],
+    symbols[Group1]= [              k,              K,      braceleft,       NoSymbol,        percent,       NoSymbol,             1,       NoSymbol ],
     actions[Group1]= [ 
         NoAction() ] };
 

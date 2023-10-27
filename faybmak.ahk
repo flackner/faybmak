@@ -239,19 +239,19 @@ SC023::Return
 SC024::Return
 SC025::<
 SC026::>
-SC027::ß
+SC027::^
 SC028::Return
 
 SC056::\
-SC02c::^
-SC02d::SendInput, `%
+SC02c::ß
+SC02d::#
 SC02e::;
 +SC02e::SendInput, ``
 SC02f::=
 +SC02f::Send {´}
 SC030::?
 SC031::Return
-SC032::#
+SC032::SendInput, `%
 SC033::@
 SC034::Return
 SC035::Return
