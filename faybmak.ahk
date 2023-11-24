@@ -1,19 +1,18 @@
-#Persistent
+﻿#Persistent
 #MaxHotkeysPerInterval 999999999
 faybmakIsActive := true
 
 #SC001::
 {
-    If (faybmakIsActive)
-    {
-        faybmakIsActive := false
-        stopBox("faybmak - STOPPED")
-    }
-    Else
-    {
-        faybmakIsActive := true
-        activeBox("faybmak - ACTIVE")
-    }
+  faybmakIsActive := false
+  stopBox("faybmak - STOPPED")
+}
+return
+
+#SC00E::
+{
+  faybmakIsActive := true
+  activeBox("faybmak - ACTIVE")
 }
 return
 
@@ -57,6 +56,7 @@ NumpadPgUp::Send, {Click, Middle}
 
 *CapsLock::LControl
 *SC01B::RShift
+*SC031::LWin
         
 *SC138::Cur := true
 *SC138 Up::Cur := false
@@ -73,8 +73,6 @@ return
 
 *SC023::Send, {LCtrl Down}{LAlt Down}
 *SC023 Up::Send, {LAlt Up}{LCtrl Up}
-
-*SC031::LWin
 
 *SC136::Send, {LAlt Down}{LWin Down}
 *SC136 Up::Send, {LWin Up}{LAlt Up}
