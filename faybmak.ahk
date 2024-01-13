@@ -243,9 +243,9 @@ SC028::Return
 SC056::\
 SC02c::ß
 SC02d::#
-SC02e::;
+SC02e::=
 +SC02e::SendInput, ``
-SC02f::=
+SC02f::;
 +SC02f::Send {´}
 SC030::?
 SC031::Return

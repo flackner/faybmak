@@ -486,7 +486,7 @@ xkb_symbols "faybmak" {
         NoAction()] };
 
     key <AB03> {
-    symbols[Group1]= [              d,              D,       NoSymbol,       NoSymbol,      semicolon,          acute,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              d,              D,       NoSymbol,       NoSymbol,          equal,          acute,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(), 
         NoAction(),
@@ -498,7 +498,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<PGDN>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control+Alt) ] };
 
     key <AB04> {
-    symbols[Group1]= [              v,              V,       NoSymbol,       NoSymbol,          equal,          grave,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              v,              V,       NoSymbol,       NoSymbol,      semicolon,          grave,       NoSymbol,       NoSymbol ],
     actions[Group1]= [ 
         NoAction(), 
         NoAction(),
