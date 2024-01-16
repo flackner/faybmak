@@ -25,7 +25,7 @@ return
 NumpadDown::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
 ; side wheel down
 NumpadUp::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
-  
+
 ; gesture up
 NumpadIns::Send, {LWin Down}e{LWin Up}
 ; gesture down
@@ -57,7 +57,7 @@ NumpadPgUp::Send, {Click, Middle}
 *CapsLock::LControl
 *SC01B::RShift
 *SC031::LWin
-        
+
 *SC138::Cur := true
 *SC138 Up::Cur := false
 
@@ -165,12 +165,12 @@ SC01A::Esc
 
 SC01E::Home
 SC01F::Send, ^{Left}
-+SC01F::Send, +^{Left}				
++SC01F::Send, +^{Left}
 !SC01F::Send, !^{Left}
 #SC01F::Send, #^{Left}
 SC020::Down
 SC021::Send, ^{Right}
-+SC021::Send, +^{Right}				
++SC021::Send, +^{Right}
 !SC021::Send, !^{Right}
 #SC021::Send, #^{Right}
 SC022::End
@@ -216,8 +216,8 @@ SC00D::Return
 SC010::~
 SC011::!
 SC012::/
-SC013::&
-SC014::|
+SC013::|
+SC014::&
 SC015::Return
 SC016::Return
 SC017::Return
@@ -318,7 +318,7 @@ stopBox(text){
 	Gui, Font, 000000 s20 wbold, Verdana ;changes font color, size and font
 	Gui, Add, Text, x0 y0, %text% ;the text to display
         Gui, Show, NoActivate X0 Y0, "test"
-  
+
 
 	sleep, 1000
 	Gui, Destroy
@@ -330,7 +330,7 @@ activeBox(text){
 	Gui, Font, 000000 s20 wbold, Verdana ;changes font color, size and font
 	Gui, Add, Text, x0 y0, %text% ;the text to display
         Gui, Show, NoActivate X0 Y0, "test"
-  
+
 
 	sleep, 1000
 	Gui, Destroy
