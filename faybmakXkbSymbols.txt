@@ -79,9 +79,6 @@ xkb_symbols "faybmak" {
         actions[Group1]= [
         SetMods(modifiers=Control) ] };
 
-    replace key <AD06> {
-        symbols[Group1]= [ Tab ] };
-
     replace key <AC06> {
         symbols[Group1]= [ NoSymbol ],
         actions[Group1]= [
@@ -340,6 +337,18 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<RGHT>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control+Super),
         RedirectKey(key=<RGHT>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control+Super) ] };
 
+    key <AD06> {
+    symbols[Group1]= [            Tab,            Tab,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [
+        NoAction(),
+        NoAction(),
+        NoAction(),
+        NoAction(),
+        NoAction(),
+        NoAction(),
+        RedirectKey(key=<AD03>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control+Shift),
+        RedirectKey(key=<AD03>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control+Shift) ] };
+
     key <AD07> {
     symbols[Group1]= [              j,              J,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [
@@ -483,7 +492,14 @@ xkb_symbols "faybmak" {
     key <AB02> {
     symbols[Group1]= [              f,              F,     apostrophe,       NoSymbol,     numbersign,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [
-        NoAction()] };
+        NoAction(),
+        NoAction(),
+        NoAction(),
+        NoAction(),
+        NoAction(),
+        NoAction(),
+        RedirectKey(key=<AB04>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control+Shift),
+        RedirectKey(key=<AB04>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control+Shift) ] };
 
     key <AB03> {
     symbols[Group1]= [              d,              D,       NoSymbol,       NoSymbol,          equal,          acute,       NoSymbol,       NoSymbol ],
