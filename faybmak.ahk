@@ -146,8 +146,8 @@ SC007::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-
 SC008::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 6 | Switch-Desktop",, Hide
 SC009::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 7 | Switch-Desktop",, Hide
 SC00A::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 8 | Switch-Desktop",, Hide
-SC00B::!^-
-SC00C::!^+
+SC00B::!^NumpadSub
+SC00C::!^NumpadAdd
 SC00D::+F10
 SC00E::!F4
 
