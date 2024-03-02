@@ -82,10 +82,10 @@ return
 
 #If (faybmakIsActive and Cur and Sym)
 
-SC002::F1
-SC003::F2
-SC004::F3
-SC005::F4
+SC002::^PgUp
+SC003::^PgDn
+SC004::^NumpadSub
+SC005::^NumpadAdd
 SC006::F5
 SC007::F6
 SC008::F7
