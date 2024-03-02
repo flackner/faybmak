@@ -86,8 +86,8 @@ SC002::^PgUp
 SC003::^PgDn
 SC004::^c
 SC005::^v
-SC006::Send {Volume_Down}
-SC007::Send {Volume_Up}
+SC006::Send {Volume_Down 3}
+SC007::Send {Volume_Up 3}
 SC008::Send {Volume_Mute}
 SC009::^!+Up
 SC00A::^!+Down
