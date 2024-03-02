@@ -84,19 +84,19 @@ return
 
 SC002::^PgUp
 SC003::^PgDn
-SC004::^NumpadSub
-SC005::^NumpadAdd
-SC006::F5
-SC007::F6
-SC008::F7
-SC009::F8
-SC00A::F9
-SC00B::F10
-SC00C::F11
-SC00D::F12
+SC004::^c
+SC005::^v
+SC006::Send {Volume_Up}
+SC007::Send {Volume_Down}
+SC008::Send {Volume_Mute}
+SC009::^!+Up
+SC00A::^!+Down
+SC00B::^End
+SC00C::^Home
+SC00D::#w
 
-SC010::BackSpace
-SC011::Delete
+SC010::^NumpadSub
+SC011::^NumpadAdd
 SC012::^!Up
 SC013::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
 SC014::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
