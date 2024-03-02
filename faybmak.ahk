@@ -86,14 +86,14 @@ SC002::^PgUp
 SC003::^PgDn
 SC004::^c
 SC005::^v
-SC006::Send {Volume_Up}
-SC007::Send {Volume_Down}
+SC006::Send {Volume_Down}
+SC007::Send {Volume_Up}
 SC008::Send {Volume_Mute}
 SC009::^!+Up
 SC00A::^!+Down
 SC00B::^End
 SC00C::^Home
-SC00D::#w
+SC00D::#Tab
 
 SC010::^NumpadSub
 SC011::^NumpadAdd
