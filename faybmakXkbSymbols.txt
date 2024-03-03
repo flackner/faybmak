@@ -364,7 +364,14 @@ xkb_symbols "faybmak" {
     key <AD07> {
     symbols[Group1]= [              j,              J,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [
-        NoAction() ] };
+        NoAction(),
+        NoAction(),
+        NoAction(),
+        NoAction(),
+        NoAction(),
+        NoAction(),
+        RedirectKey(key=<I150>, clearmods=LevelThree, clearmods=LevelFive),
+        RedirectKey(key=<I150>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AD08> {
     symbols[Group1]= [              l,              L,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,              7,       NoSymbol ],
@@ -510,8 +517,8 @@ xkb_symbols "faybmak" {
         NoAction(),
         NoAction(),
         NoAction(),
-        RedirectKey(key=<I150>, clearmods=LevelThree, clearmods=LevelFive),
-        RedirectKey(key=<I150>, clearmods=LevelThree, clearmods=LevelFive) ] };
+        RedirectKey(key=<AD02>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
+        RedirectKey(key=<AD02>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control) ] };
 
     key <AB03> {
     symbols[Group1]= [              d,              D,       NoSymbol,       NoSymbol,          equal,          acute,       NoSymbol,       NoSymbol ],
