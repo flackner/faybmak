@@ -100,7 +100,7 @@ SC011::^NumpadAdd
 SC012::^!Up
 SC013::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
 SC014::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
-SC015::^+c
+SC015::DllCall("PowrProf.dll\SetSuspendState", "int", 0, "int", 0, "int", 0)
 SC016::Return
 SC017::7
 SC018::8
@@ -121,7 +121,7 @@ SC028::0
 
 SC056::Return
 SC02c::Return
-SC02d::^+v
+SC02d::^w
 SC02e::!^PgDn
 SC02f::!^PgUp
 SC030::Return
