@@ -154,8 +154,8 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<KP1>, clearmods=LevelThree+Shift, modifiers=Super+Control),
         RedirectKey(key=<KP1>, clearmods=LevelFive, modifiers=Control),
         RedirectKey(key=<KP1>, clearmods=LevelFive, modifiers=Control),
-        RedirectKey(key=<PGUP>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
-        RedirectKey(key=<PGUP>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control)] };
+        RedirectKey(key=<VOL->, clearmods=LevelThree, clearmods=LevelFive),
+        RedirectKey(key=<VOL->, clearmods=LevelThree, clearmods=LevelFive)] };
 
     key <AE02> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,      NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -166,8 +166,8 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<KP2>, clearmods=LevelThree+Shift, modifiers=Super+Control),
         RedirectKey(key=<KP2>, clearmods=LevelFive, modifiers=Control),
         RedirectKey(key=<KP2>, clearmods=LevelFive, modifiers=Control),
-        RedirectKey(key=<PGDN>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
-        RedirectKey(key=<PGDN>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control)] };
+        RedirectKey(key=<VOL+>, clearmods=LevelThree, clearmods=LevelFive),
+        RedirectKey(key=<VOL+>, clearmods=LevelThree, clearmods=LevelFive)] };
 
     key <AE03> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -202,8 +202,8 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<KP5>, clearmods=LevelThree+Shift, modifiers=Super+Control),
         RedirectKey(key=<KP5>, clearmods=LevelFive, modifiers=Control),
         RedirectKey(key=<KP5>, clearmods=LevelFive, modifiers=Control),
-        RedirectKey(key=<VOL->, clearmods=LevelThree, clearmods=LevelFive),
-        RedirectKey(key=<VOL->, clearmods=LevelThree, clearmods=LevelFive)] };
+        RedirectKey(key=<KPSU>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
+        RedirectKey(key=<KPSU>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control)] };
 
     key <AE06> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -214,8 +214,8 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<KP6>, clearmods=LevelThree+Shift, modifiers=Super+Control),
         RedirectKey(key=<KP6>, clearmods=LevelFive, modifiers=Control),
         RedirectKey(key=<KP6>, clearmods=LevelFive, modifiers=Control),
-        RedirectKey(key=<VOL+>, clearmods=LevelThree, clearmods=LevelFive),
-        RedirectKey(key=<VOL+>, clearmods=LevelThree, clearmods=LevelFive)] };
+        RedirectKey(key=<KPAD>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
+        RedirectKey(key=<KPAD>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control)] };
 
     key <AE07> {
     symbols[Group1]= [       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -298,8 +298,8 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<PGUP>, clearmods=LevelThree, modifiers=Control),
         NoAction(),
         NoAction(),
-        RedirectKey(key=<KPSU>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
-        RedirectKey(key=<KPSU>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control)] };
+        RedirectKey(key=<PGUP>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
+        RedirectKey(key=<PGUP>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control)] };
 
     key <AD02> {
     symbols[Group1]= [              w,              W,       NoSymbol,       NoSymbol,         exclam,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -310,8 +310,8 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<LEFT>, clearmods=LevelThree),
         NoAction(),
         NoAction(),
-        RedirectKey(key=<KPAD>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
-        RedirectKey(key=<KPAD>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control)] };
+        RedirectKey(key=<PGDN>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
+        RedirectKey(key=<PGDN>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control)] };
 
     key <AD03> {
     symbols[Group1]= [              c,              C,       NoSymbol,       NoSymbol,          slash,       NoSymbol,       NoSymbol,       NoSymbol ],
@@ -352,6 +352,11 @@ xkb_symbols "faybmak" {
     key <AD06> {
     symbols[Group1]= [            Tab,            Tab,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [
+        NoAction() ] };
+
+    key <AD07> {
+    symbols[Group1]= [              j,              J,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
+    actions[Group1]= [
         NoAction(),
         NoAction(),
         NoAction(),
@@ -360,11 +365,6 @@ xkb_symbols "faybmak" {
         NoAction(),
         RedirectKey(key=<I150>, clearmods=LevelThree, clearmods=LevelFive),
         RedirectKey(key=<I150>, clearmods=LevelThree, clearmods=LevelFive) ] };
-
-    key <AD07> {
-    symbols[Group1]= [              j,              J,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol ],
-    actions[Group1]= [
-        NoAction() ] };
 
     key <AD08> {
     symbols[Group1]= [              l,              L,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,              7,       NoSymbol ],
@@ -511,7 +511,7 @@ xkb_symbols "faybmak" {
         NoAction(),
         NoAction(),
         RedirectKey(key=<AD02>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
-        RedirectKey(key=<AD02>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control) ] };
+        RedirectKey(key=<AD02>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control)] };
 
     key <AB03> {
     symbols[Group1]= [              d,              D,       NoSymbol,       NoSymbol,          equal,          acute,       NoSymbol,       NoSymbol ],

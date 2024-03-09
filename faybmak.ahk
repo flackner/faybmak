@@ -82,12 +82,12 @@ return
 
 #If (faybmakIsActive and Cur and Sym)
 
-SC002::^PgUp
-SC003::^PgDn
+SC002::Send {Volume_Down 3}
+SC003::Send {Volume_Up 3}
 SC004::^c
 SC005::^v
-SC006::Send {Volume_Down 3}
-SC007::Send {Volume_Up 3}
+SC006::^NumpadSub
+SC007::^NumpadAdd
 SC008::Send {Volume_Mute}
 SC009::^!+Up
 SC00A::^!+Down
@@ -95,13 +95,13 @@ SC00B::^End
 SC00C::^Home
 SC00D::#Tab
 
-SC010::^NumpadSub
-SC011::^NumpadAdd
+SC010::^PgUp
+SC011::^PgDn
 SC012::^!Up
 SC013::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
 SC014::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
-SC015::DllCall("PowrProf.dll\SetSuspendState", "int", 0, "int", 0, "int", 0)
-SC016::Return
+SC015::Return
+SC016::DllCall("PowrProf.dll\SetSuspendState", "int", 0, "int", 0, "int", 0)
 SC017::7
 SC018::8
 SC019::9
