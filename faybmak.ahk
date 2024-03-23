@@ -88,7 +88,7 @@ SC004::^c
 SC005::^v
 SC006::^NumpadSub
 SC007::^NumpadAdd
-SC008::Send {Volume_Mute}
+SC008::F2
 SC009::^!+Up
 SC00A::^!+Down
 SC00B::^End
@@ -119,12 +119,12 @@ SC026::5
 SC027::6
 SC028::0
 
-SC056::Return
-SC02c::Return
+SC056::Send {Volume_Mute}
+SC02c::+^t
 SC02d::^w
 SC02e::!^PgDn
 SC02f::!^PgUp
-SC030::Return
+SC030::Delete
 SC031::Return
 SC032::1
 SC033::2
