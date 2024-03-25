@@ -101,7 +101,7 @@ SC012::^!Up
 SC013::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
 SC014::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
 SC015::Return
-SC016::DllCall("PowrProf.dll\SetSuspendState", "int", 0, "int", 0, "int", 0)
+SC016::Send {Volume_Mute}
 SC017::7
 SC018::8
 SC019::9
@@ -119,7 +119,7 @@ SC026::5
 SC027::6
 SC028::0
 
-SC056::Send {Volume_Mute}
+SC056::DllCall("PowrProf.dll\SetSuspendState", "int", 0, "int", 0, "int", 0)
 SC02c::+^t
 SC02d::^w
 SC02e::!^PgDn
