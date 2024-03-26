@@ -517,8 +517,8 @@ xkb_symbols "faybmak" {
         NoAction(),
         NoAction(),
         NoAction(),
-        RedirectKey(key=<AD02>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control),
-        RedirectKey(key=<AD02>, clearmods=LevelThree, clearmods=LevelFive, modifiers=Control)] };
+        RedirectKey(key=<ESC>, clearmods=LevelThree, clearmods=LevelFive),
+        RedirectKey(key=<ESC>, clearmods=LevelThree, clearmods=LevelFive)] };
 
     key <AB03> {
     symbols[Group1]= [              d,              D,       NoSymbol,       NoSymbol,          equal,          acute,       NoSymbol,       NoSymbol ],

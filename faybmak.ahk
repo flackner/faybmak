@@ -121,7 +121,7 @@ SC028::0
 
 SC056::DllCall("PowrProf.dll\SetSuspendState", "int", 0, "int", 0, "int", 0)
 SC02c::+^t
-SC02d::^w
+SC02d::Esc
 SC02e::!^PgDn
 SC02f::!^PgUp
 SC030::Delete
