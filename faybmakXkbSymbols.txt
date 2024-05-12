@@ -459,12 +459,12 @@ xkb_symbols "faybmak" {
         NoAction() ] };
 
     key <AC08> {
-    symbols[Group1]= [              n,              N,      parenleft,       NoSymbol,           less,       NoSymbol,              4,       NoSymbol ],
+    symbols[Group1]= [              n,              N,      parenleft,       NoSymbol,      backslash,       NoSymbol,              4,       NoSymbol ],
     actions[Group1]= [
         NoAction() ] };
 
     key <AC09> {
-    symbols[Group1]= [              e,              E,     parenright,       NoSymbol,        greater,       NoSymbol,              5,       NoSymbol ],
+    symbols[Group1]= [              e,              E,     parenright,       NoSymbol,         ssharp,       NoSymbol,              5,       NoSymbol ],
     actions[Group1]= [
         NoAction() ] };
 
@@ -485,7 +485,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<DELE>, clearmods=LevelThree) ] };
 
     key <LSGT> {
-    symbols[Group1]= [              z,              Z,         dollar,     numbersign,      backslash,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [              z,              Z,         dollar,     numbersign,           less,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [
         NoAction(),
         NoAction(),
@@ -497,7 +497,7 @@ xkb_symbols "faybmak" {
         RedirectKey(key=<I150>, clearmods=LevelThree, clearmods=LevelFive) ] };
 
     key <AB01> {
-    symbols[Group1]= [     odiaeresis,     Odiaeresis,       NoSymbol,       NoSymbol,         ssharp,       NoSymbol,       NoSymbol,       NoSymbol ],
+    symbols[Group1]= [     odiaeresis,     Odiaeresis,       NoSymbol,       NoSymbol,        greater,       NoSymbol,       NoSymbol,       NoSymbol ],
     actions[Group1]= [
         NoAction(),
         NoAction(),

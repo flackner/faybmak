@@ -235,14 +235,14 @@ SC021::.
 SC022::,
 SC023::Return
 SC024::Return
-SC025::<
-SC026::>
+SC025::#
+SC026::\
 SC027::^
 SC028::Return
 
-SC056::\
-SC02c::ß
-SC02d::#
+SC056::<
+SC02c::>
+SC02d::ß
 SC02e::=
 +SC02e::SendInput, ``
 SC02f::;
