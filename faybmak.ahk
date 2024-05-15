@@ -241,8 +241,8 @@ SC027::^
 SC028::Return
 
 SC056::<
-SC02c::>
-SC02d::ß
+SC02c::ß
+SC02d::>
 SC02e::=
 +SC02e::SendInput, ``
 SC02f::;
