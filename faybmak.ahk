@@ -91,8 +91,8 @@ SC007::^NumpadAdd
 SC008::F2
 SC009::^!+Up
 SC00A::^!+Down
-SC00B::^End
-SC00C::^Home
+SC00B::+F10
+SC00C::^+b
 SC00D::#Tab
 
 SC010::^PgUp
@@ -107,11 +107,11 @@ SC018::8
 SC019::9
 SC01A::BackSpace
 
-SC01E::!^Home
+SC01E::^!Home
 SC01F::!Home
-SC020::!^Down
+SC020::^!Down
 SC021::!End
-SC022::!^End
+SC022::^!End
 SC023::Return
 SC024::.
 SC025::4
@@ -120,10 +120,10 @@ SC027::6
 SC028::0
 
 SC056::DllCall("PowrProf.dll\SetSuspendState", "int", 0, "int", 0, "int", 0)
-SC02c::+^t
+SC02c::^+t
 SC02d::Esc
-SC02e::!^PgDn
-SC02f::!^PgUp
+SC02e::^!PgDn
+SC02f::^!PgUp
 SC030::Delete
 SC031::Return
 SC032::1
@@ -146,9 +146,9 @@ SC007::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-
 SC008::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 6 | Switch-Desktop",, Hide
 SC009::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 7 | Switch-Desktop",, Hide
 SC00A::Run, powershell -ExecutionPolicy ByPass -NoProfile -nologo -Command "Get-Desktop 8 | Switch-Desktop",, Hide
-SC00B::!^NumpadSub
-SC00C::!^NumpadAdd
-SC00D::+F10
+SC00B::^!Insert
+SC00C::^!+Insert
+SC00D::^!b
 SC00E::!F4
 
 SC010::^PgUp
@@ -165,13 +165,13 @@ SC01A::Esc
 
 SC01E::Home
 SC01F::Send, ^{Left}
-+SC01F::Send, +^{Left}
-!SC01F::Send, !^{Left}
++SC01F::Send, ^+{Left}
+!SC01F::Send, ^!{Left}
 #SC01F::Send, #^{Left}
 SC020::Down
 SC021::Send, ^{Right}
-+SC021::Send, +^{Right}
-!SC021::Send, !^{Right}
++SC021::Send, ^+{Right}
+!SC021::Send, ^!{Right}
 #SC021::Send, #^{Right}
 SC022::End
 SC023::Return
@@ -195,8 +195,7 @@ SC033::}
 SC034::Return
 SC035::Return
 
-SC039::^Delete
-+SC039::Send, {Delete}
+SC039:::
 
 #If (faybmakIsActive and !Cur and Sym)
 
@@ -236,8 +235,8 @@ SC022::,
 SC023::Return
 SC024::Return
 SC025::#
-SC026::\
-SC027::^
+SC026::^
+SC027::Return
 SC028::Return
 
 SC056::<
@@ -254,7 +253,7 @@ SC033::@
 SC034::Return
 SC035::Return
 
-SC039::Send {:}
+SC039::\
 
 #If (faybmakIsActive and !Cur and !Sym)
 
