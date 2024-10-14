@@ -82,8 +82,8 @@ return
 
 #If (faybmakIsActive and Cur and Sym)
 
-SC002::Send {Volume_Down 3}
-SC003::Send {Volume_Up 3}
+SC002::!F4
+SC003::^x
 SC004::^c
 SC005::^v
 SC006::^NumpadSub
@@ -100,8 +100,8 @@ SC011::^PgDn
 SC012::^!Up
 SC013::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
 SC014::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
-SC015::Return
-SC016::Send {Volume_Mute}
+SC015::Send {Volume_Up}
+SC016::Return
 SC017::7
 SC018::8
 SC019::9
@@ -156,7 +156,7 @@ SC011::Left
 SC012::Up
 SC013::Right
 SC014::^PgDn
-SC015::Return
+SC015::Send {Volume_Mute}
 SC016::Return
 SC017::Return
 SC018::[
@@ -276,7 +276,7 @@ SC011::w
 SC012::c
 SC013::p
 SC014::b
-SC015::Tab
+SC015::Send {Volume_Down}
 SC016::j
 SC017::l
 SC018::u
