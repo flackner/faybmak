@@ -92,7 +92,7 @@ SC008::F2
 SC009::^!+Up
 SC00A::^!+Down
 SC00B::+F10
-SC00C::^+b
+SC00C::!+b
 SC00D::#Tab
 
 SC010::^PgUp
