@@ -197,8 +197,7 @@ NumpadPgUp::Send, {Click, Middle}
 	SC033::}
 	SC034::Return
 	SC035::Return
-
-	SC039:::
+	SC039::\
 
 #If (faybmakIsActive and !Cur and Sym)
 
@@ -255,8 +254,7 @@ NumpadPgUp::Send, {Click, Middle}
 	SC033::@
 	SC034::Return
 	SC035::Return
-
-	SC039::\
+	SC039:::
 
 #If (faybmakIsActive and !Cur and !Sym)
 
