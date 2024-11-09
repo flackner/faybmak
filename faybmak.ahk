@@ -1,6 +1,6 @@
 ﻿#Persistent
 #MaxHotkeysPerInterval 999999999
-#Include %A_LineFile%\..\VirtualDesktopAccessor\example.ahk
+#Include %A_LineFile%\..\VirtualDesktopApi.ahk
 SetDesktopName(0, "OnLine! 🛜")
 SetDesktopName(1, "GetCoding! 👽")
 SetDesktopName(2, "Terminal! ⌨️")
