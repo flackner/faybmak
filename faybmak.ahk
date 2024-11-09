@@ -1,6 +1,12 @@
 ﻿#Persistent
 #MaxHotkeysPerInterval 999999999
-#Include %A_ScriptDir%\VirtualDesktopAccessor\example.ahk
+#Include %A_LineFile%\..\VirtualDesktopAccessor\example.ahk
+SetDesktopName(0, "OnLine! 🛜")
+SetDesktopName(1, "GetCoding! 👽")
+SetDesktopName(2, "Terminal! ⌨️")
+SetDesktopName(3, "FileEx! 📁")
+SetDesktopName(4, "Comunicate! 🤖")
+
 
 faybmakIsActive := true
 
