@@ -160,11 +160,11 @@ NumpadPgUp::Send, {Click, Middle}
 	SC00D::^!b
 	SC00E::!F4
 
-	SC010::^PgUp
+	SC010::^!q
 	SC011::Left
 	SC012::Up
 	SC013::Right
-	SC014::^PgDn
+	SC014::^!t
 	SC015::Send {Volume_Mute}
 	SC016::Return
 	SC017::Return
