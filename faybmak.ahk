@@ -90,18 +90,18 @@ NumpadPgUp::Send, {Click, Middle}
 
 #If (faybmakIsActive and Cur and Sym)
 
-	SC002::!F4
-	SC003::^x
+	SC002::F3
+	SC003::F4
 	SC004::^c
 	SC005::^v
 	SC006::^NumpadSub
 	SC007::^NumpadAdd
 	SC008::F2
-	SC009::^!+Up
-	SC00A::^!+Down
-	SC00B::+F10
-	SC00C::!+b
-	SC00D::#Tab
+	SC009::F10
+	SC00A::F11
+	SC00B::!+b
+	SC00C::+F10
+	SC00D::F12
 
 	SC010::^PgUp
 	SC011::^PgDn
@@ -157,7 +157,7 @@ NumpadPgUp::Send, {Click, Middle}
 	SC00A::GoToDesktopNumber(8)
 	SC00B::^!Insert
 	SC00C::^!+Insert
-	SC00D::^!b
+	SC00D::#Tab
 	SC00E::!F4
 
 	SC010::^!q
