@@ -4,8 +4,10 @@
 SetDesktopName(0, "OnLine! 🛜")
 SetDesktopName(1, "GetCoding! 👽")
 SetDesktopName(2, "Terminal! ⌨️")
-SetDesktopName(3, "FileEx! 📁")
-SetDesktopName(4, "Comunicate! 🤖")
+SetDesktopName(3, "GetUi! 🌐")
+SetDesktopName(4, "GetAi! 🎨")
+SetDesktopName(5, "FileEx! 📁")
+SetDesktopName(6, "Comunicate! 🤖")
 
 
 faybmakIsActive := true
@@ -104,10 +106,10 @@ NumpadPgUp::Send, {Click, Middle}
 	SC00D::F12
 
 	SC010::^PgUp
-	SC011::^PgDn
+	SC011::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
 	SC012::^!Up
-	SC013::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
-	SC014::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
+	SC013::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
+	SC014::^PgDn 
 	SC015::Send {Volume_Up}
 	SC016::Return
 	SC017::7
