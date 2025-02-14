@@ -236,26 +236,21 @@ NumpadPgUp::Send, {Click, Middle}
 
 	SC01E::-
 	SC01F::+
-	+SC01F::Send {€}
 	SC020::*
-	+SC020::Send {°}
 	SC021::.
-	+SC021::Send {§}
 	SC022::,
 	SC023::Return
-	SC024::Return
+	SC024::SendInput, ``
 	SC025::#
 	SC026::^
-	SC027::Return
-	SC028::Return
+	SC027::Send {´}
+	SC028::Send {°}
 
 	SC056::<
 	SC02c::ß
 	SC02d::>
 	SC02e::=
-	+SC02e::SendInput, ``
 	SC02f::;
-	+SC02f::Send {´}
 	SC030::?
 	SC031::Return
 	SC032::SendInput, `%
