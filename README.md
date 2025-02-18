@@ -47,7 +47,7 @@ This is a layered and modified version of the angle-mod wide ISO [Colemak-DH lay
    ┃ Ctrl   ┃HOME │^LEFT│ DN  │^RGHT│ END │ Alt │     │ (   │ )   │ Tab │ DEL │ L1  ┃      ┃
    ┣━━━━━━┳━┹───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┬─┴───┲━┷━━━━━┻━━━━━━┫
    ┃      ┃     │     │     │     │     │     │     │     │     │     │     ┃              ┃
-   ┃Shift ┃ $   │     │ '   │!PGUP│!PGDN│ "   │ WIN │ {   │ }   │     |     ┃ Win + Alt    ┃
+   ┃Shift ┃ $   │ ^!b │ '   │!PGUP│!PGDN│ "   │ WIN │ {   │ }   │     |     ┃ Win + Alt    ┃
    ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴────┲┷━━━━━╈━━━━━┻┳━━━━━━┳━━━━━━┫
    ┃       ┃       ┃       ┃                                   ┃      ┃      ┃      ┃      ┃
    ┃       ┃ Win   ┃ Alt   ┃           \                       ┃ L2   ┃      ┃ Ctrl ┃      ┃
