@@ -195,7 +195,7 @@ NumpadPgUp::Send, {Click, Middle}
 	SC028::Delete
 
 	SC056::$
-	SC02c::Return
+	SC02c::^!b
 	SC02d::'
 	SC02e::!PgDn
 	SC02f::!PgUp
