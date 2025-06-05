@@ -105,10 +105,10 @@ NumpadPgUp::Send, {Click, Middle}
 	SC00C::+F10
 	SC00D::F12
 
-	SC010::^PgUp
-	SC011::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
+	SC010::Send, {LCtrl Down}{LWin Down}{Left}{LWin Up}{LCtrl Up}
+	SC011::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
 	SC012::^!Up
-	SC013::Send, {LCtrl Down}{LWin Down}{Right}{LWin Up}{LCtrl Up}
+	SC013::^PgUp
 	SC014::^PgDn 
 	SC015::Send {Volume_Up}
 	SC016::Return
