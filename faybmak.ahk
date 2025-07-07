@@ -92,13 +92,13 @@ NumpadPgUp::Send, {Click, Middle}
 
 #If (faybmakIsActive and Cur and Sym)
 
-	SC002::F3
-	SC003::F4
+	SC002::^+1
+	SC003::^+2
 	SC004::^c
 	SC005::^v
-	SC006::^NumpadSub
-	SC007::^NumpadAdd
-	SC008::F2
+	SC006::F2
+	SC007::F3
+	SC008::F4
 	SC009::F10
 	SC00A::F11
 	SC00B::!+b
@@ -162,7 +162,7 @@ NumpadPgUp::Send, {Click, Middle}
 	SC00D::#Tab
 	SC00E::!F4
 
-	SC010::^!q
+	SC010::^!w
 	SC011::Left
 	SC012::Up
 	SC013::Right
