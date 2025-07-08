@@ -130,11 +130,11 @@ NumpadPgUp::Send, {Click, Middle}
 	SC028::0
 
 	SC056::DllCall("PowrProf.dll\SetSuspendState", "int", 0, "int", 0, "int", 0)
-	SC02c::^+t
-	SC02d::Esc
+	SC02c::Return
+	SC02d::Return
 	SC02e::^!PgDn
 	SC02f::^!PgUp
-	SC030::Delete
+	SC030::^!x
 	SC031::Return
 	SC032::1
 	SC033::2
