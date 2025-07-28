@@ -123,7 +123,7 @@ NumpadPgUp::Send, {Click, Middle}
 	SC021::!End
 	SC022::^!End
 	SC023::Return
-	SC024::.
+	SC024::+Tab
 	SC025::4
 	SC026::5
 	SC027::6
